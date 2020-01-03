@@ -1,8 +1,8 @@
 <?php
 include_once('./_common.php');
 
-goto_url(G5_URL.'/frontVue/MineSweeper.html');
-goto_url(G5_URL.'/frontReact');
+goto_url(G5_URL.'/frontVue/');
+goto_url(G5_URL.'/frontReact/');
 
 
 define('_INDEX_', true);

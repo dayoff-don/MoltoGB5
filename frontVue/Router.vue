@@ -1,8 +1,8 @@
 <template>
   <div>
     <div>
-      <router-link to="/">홈</router-link>
-      <router-link to="/pages/rock-scissors-paper">가위바위보</router-link>
+      <router-link to="/frontVue">홈</router-link>
+      <router-link to="/frontVue/pages/number-baseball">넘버베이스볼</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -10,7 +10,6 @@
 
 <script>
   import router from './routes';
-
   export default {
     router,
   };

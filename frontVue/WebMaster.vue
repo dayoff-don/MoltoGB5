@@ -2,7 +2,7 @@
   <div v-if="currentGame === 'number-baseball'">
     <number-baseball></number-baseball>
   </div>
-  <div v-else>일치하는 게임이 없습니다</div>
+  <div v-else>기본메인페이지</div>
 </template>
 
 <script>
