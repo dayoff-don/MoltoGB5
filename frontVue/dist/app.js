@@ -122,6 +122,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
+/***/ "./WebMaster.vue":
+/*!***********************!*\
+  !*** ./WebMaster.vue ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _WebMaster_vue_vue_type_template_id_6e12ae18___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WebMaster.vue?vue&type=template&id=6e12ae18& */ \"./WebMaster.vue?vue&type=template&id=6e12ae18&\");\n/* harmony import */ var _WebMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WebMaster.vue?vue&type=script&lang=js& */ \"./WebMaster.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _WebMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _WebMaster_vue_vue_type_template_id_6e12ae18___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _WebMaster_vue_vue_type_template_id_6e12ae18___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"WebMaster.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./WebMaster.vue?");
+
+/***/ }),
+
+/***/ "./WebMaster.vue?vue&type=script&lang=js&":
+/*!************************************************!*\
+  !*** ./WebMaster.vue?vue&type=script&lang=js& ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_WebMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/vue-loader/lib??vue-loader-options!./WebMaster.vue?vue&type=script&lang=js& */ \"./node_modules/vue-loader/lib/index.js?!./WebMaster.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_vue_loader_lib_index_js_vue_loader_options_WebMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./WebMaster.vue?");
+
+/***/ }),
+
+/***/ "./WebMaster.vue?vue&type=template&id=6e12ae18&":
+/*!******************************************************!*\
+  !*** ./WebMaster.vue?vue&type=template&id=6e12ae18& ***!
+  \******************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WebMaster_vue_vue_type_template_id_6e12ae18___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./WebMaster.vue?vue&type=template&id=6e12ae18& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./WebMaster.vue?vue&type=template&id=6e12ae18&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WebMaster_vue_vue_type_template_id_6e12ae18___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WebMaster_vue_vue_type_template_id_6e12ae18___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./WebMaster.vue?");
+
+/***/ }),
+
 /***/ "./main.js":
 /*!*****************!*\
   !*** ./main.js ***!
@@ -179,6 +215,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rou
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/index.js?!./WebMaster.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib??vue-loader-options!./WebMaster.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_sub01_NumberBaseball__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page/sub01/NumberBaseball */ \"./page/sub01/NumberBaseball.vue\");\n//\n//\n//\n//\n//\n//\n//\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  components: {\n    NumberBaseball: _page_sub01_NumberBaseball__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  },\n  mounted() {\n    console.log(this.$router);\n    console.log(this.$route);\n  },\n  computed: {\n    currentGame() {\n      return this.$route.params.name;\n    },\n  },\n});\n\n\n//# sourceURL=webpack:///./WebMaster.vue?./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/index.js?!./page/sub01/NumberBaseball.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib??vue-loader-options!./page/sub01/NumberBaseball.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\nconst getNumbers = () => {\n  const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n  const array = [];\n  for (let i = 0; i < 4; i += 1) {\n    const chosen = candidates.splice(Math.floor(Math.random() * (9 - i)), 1)[0];\n    array.push(chosen);\n  }\n  return array;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data() {\n    return {\n      answer: getNumbers(), // ex) [1,5,3,4]\n      tries: [], // 시도 수\n      value: '', // 입력\n      result: '', // 결과\n    }\n  },\n  methods: {\n    onSubmitForm() {\n      if (this.value === this.answer.join('')) { // 정답 맞췄으면\n        this.tries.push({\n          try: this.value,\n          result: '홈런',\n        });\n        this.result = '홈런';\n        alert('게임을 다시 실행합니다.');\n        this.value = '';\n        this.answer = getNumbers();\n        this.tries = [];\n        this.$refs.answer.focus();\n      } else { // 정답 틀렸을 때\n        if (this.tries.length >= 9) { // 10번째 시도\n          this.result = `10번 넘게 틀려서 실패! 답은 ${this.answer.join(',')}였습니다!`;\n          alert('게임을 다시 시작합니다.');\n          this.value = '';\n          this.answer = getNumbers();\n          this.tries = [];\n          this.$refs.answer.focus();\n        }\n        let strike = 0;\n        let ball = 0;\n        const answerArray = this.value.split('').map(v => parseInt(v));\n        for (let i = 0; i < 4; i += 1) {\n          if (answerArray[i] === this.answer[i]) { // 숫자 자릿수 모두 정답\n            strike++;\n          } else if (this.answer.includes(answerArray[i])) { // 숫자만 정답\n            ball++;\n          }\n        }\n        this.tries.push({\n          try: this.value,\n          result: `${strike} 스트라이크, ${ball} 볼입니다.`,\n        });\n        this.value = '';\n        this.$refs.answer.focus();\n      }\n    }\n  }\n});\n\n\n//# sourceURL=webpack:///./page/sub01/NumberBaseball.vue?./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./Router.vue?vue&type=template&id=59c42c12&":
 /*!*********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./Router.vue?vue&type=template&id=59c42c12& ***!
@@ -188,6 +248,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rou
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    [\n      _c(\n        \"div\",\n        [\n          _c(\"router-link\", { attrs: { to: \"/\" } }, [_vm._v(\"홈\")]),\n          _vm._v(\" \"),\n          _c(\"router-link\", { attrs: { to: \"/pages/rock-scissors-paper\" } }, [\n            _vm._v(\"가위바위보\")\n          ])\n        ],\n        1\n      ),\n      _vm._v(\" \"),\n      _c(\"router-view\")\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./Router.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./WebMaster.vue?vue&type=template&id=6e12ae18&":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./WebMaster.vue?vue&type=template&id=6e12ae18& ***!
+  \************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm.currentGame === \"number-baseball\"\n    ? _c(\"div\", [_c(\"number-baseball\")], 1)\n    : _c(\"div\", [_vm._v(\"일치하는 게임이 없습니다\")])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./WebMaster.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./page/sub01/NumberBaseball.vue?vue&type=template&id=03542e6e&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./page/sub01/NumberBaseball.vue?vue&type=template&id=03542e6e& ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"h1\", [_vm._v(_vm._s(_vm.result))]),\n    _vm._v(\" \"),\n    _c(\n      \"form\",\n      {\n        on: {\n          submit: function($event) {\n            $event.preventDefault()\n            return _vm.onSubmitForm($event)\n          }\n        }\n      },\n      [\n        _c(\"input\", {\n          directives: [\n            {\n              name: \"model\",\n              rawName: \"v-model\",\n              value: _vm.value,\n              expression: \"value\"\n            }\n          ],\n          ref: \"answer\",\n          attrs: { minlength: \"4\", maxlength: \"4\" },\n          domProps: { value: _vm.value },\n          on: {\n            input: function($event) {\n              if ($event.target.composing) {\n                return\n              }\n              _vm.value = $event.target.value\n            }\n          }\n        }),\n        _vm._v(\" \"),\n        _c(\"button\", { attrs: { type: \"submit\" } }, [_vm._v(\"입력\")])\n      ]\n    ),\n    _vm._v(\" \"),\n    _c(\"div\", [_vm._v(\"시도: \" + _vm._s(_vm.tries.length))]),\n    _vm._v(\" \"),\n    _c(\n      \"ul\",\n      _vm._l(_vm.tries, function(t) {\n        return _c(\"li\", { key: t.try }, [\n          _c(\"div\", [_vm._v(_vm._s(t.try))]),\n          _vm._v(\" \"),\n          _c(\"div\", [_vm._v(_vm._s(t.result))])\n        ])\n      }),\n      0\n    )\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./page/sub01/NumberBaseball.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -238,6 +322,42 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
+/***/ "./page/sub01/NumberBaseball.vue":
+/*!***************************************!*\
+  !*** ./page/sub01/NumberBaseball.vue ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _NumberBaseball_vue_vue_type_template_id_03542e6e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NumberBaseball.vue?vue&type=template&id=03542e6e& */ \"./page/sub01/NumberBaseball.vue?vue&type=template&id=03542e6e&\");\n/* harmony import */ var _NumberBaseball_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NumberBaseball.vue?vue&type=script&lang=js& */ \"./page/sub01/NumberBaseball.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _NumberBaseball_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _NumberBaseball_vue_vue_type_template_id_03542e6e___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _NumberBaseball_vue_vue_type_template_id_03542e6e___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"page/sub01/NumberBaseball.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./page/sub01/NumberBaseball.vue?");
+
+/***/ }),
+
+/***/ "./page/sub01/NumberBaseball.vue?vue&type=script&lang=js&":
+/*!****************************************************************!*\
+  !*** ./page/sub01/NumberBaseball.vue?vue&type=script&lang=js& ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_NumberBaseball_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib??vue-loader-options!./NumberBaseball.vue?vue&type=script&lang=js& */ \"./node_modules/vue-loader/lib/index.js?!./page/sub01/NumberBaseball.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_vue_loader_lib_index_js_vue_loader_options_NumberBaseball_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./page/sub01/NumberBaseball.vue?");
+
+/***/ }),
+
+/***/ "./page/sub01/NumberBaseball.vue?vue&type=template&id=03542e6e&":
+/*!**********************************************************************!*\
+  !*** ./page/sub01/NumberBaseball.vue?vue&type=template&id=03542e6e& ***!
+  \**********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NumberBaseball_vue_vue_type_template_id_03542e6e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./NumberBaseball.vue?vue&type=template&id=03542e6e& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./page/sub01/NumberBaseball.vue?vue&type=template&id=03542e6e&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NumberBaseball_vue_vue_type_template_id_03542e6e___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NumberBaseball_vue_vue_type_template_id_03542e6e___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./page/sub01/NumberBaseball.vue?");
+
+/***/ }),
+
 /***/ "./routes.js":
 /*!*******************!*\
   !*** ./routes.js ***!
@@ -246,7 +366,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ \"./node_modules/vue-router/dist/vue-router.esm.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\n\n\n\n\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n  mode: 'history',\n  routes: [\n    { path: '/number-baseball', component: !(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) },\n    { path: '/response-check', component: !(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) },\n    { path: '/rock-scissors-paper', component: !(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) },\n    { path: '/lotto-generator', component: !(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) },\n    { path: '/game/:name', component: !(function webpackMissingModule() { var e = new Error(\"Cannot find module ''\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) } // /game\n  ],\n}));\n\n\n//# sourceURL=webpack:///./routes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ \"./node_modules/vue-router/dist/vue-router.esm.js\");\n/* harmony import */ var _page_sub01_NumberBaseball__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./page/sub01/NumberBaseball */ \"./page/sub01/NumberBaseball.vue\");\n/* harmony import */ var _WebMaster__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WebMaster */ \"./WebMaster.vue\");\n\n\n\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n  mode: 'history',\n  routes: [\n    { path: '/number-baseball', component: _page_sub01_NumberBaseball__WEBPACK_IMPORTED_MODULE_2__[\"default\"] },\n    { path: '/', component: _WebMaster__WEBPACK_IMPORTED_MODULE_3__[\"default\"] } // /game\n  ],\n}));\n\n\n//# sourceURL=webpack:///./routes.js?");
 
 /***/ })
 

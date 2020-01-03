@@ -6,13 +6,11 @@
 </template>
 
 <script>
-  import NumberBaseball from '/page/sub01/NumberBaseball';
+  import NumberBaseball from './page/sub01/NumberBaseball';
 
   export default {
     components: {
       NumberBaseball,
-      ResponseCheck,
-      LottoGenerator,
     },
     mounted() {
       console.log(this.$router);
