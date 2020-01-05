@@ -1,26 +1,41 @@
 {
-  "name": "response-check",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "frontvue",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "webpack --watch",
-    "dev": "webpack-dev-server --hot"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.7",
-    "vuex": "^3.1.1"
+    "core-js": "^3.4.4",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "css-loader": "^3.0.0",
-    "vue-loader": "^15.7.0",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
-  }
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

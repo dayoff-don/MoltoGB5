@@ -16,6 +16,11 @@
 </template>
 
 <script>
+
+
+  import { mapState } from 'vuex';
+  import store, {} from '../../store';
+
   const getNumbers = () => {
     const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     const array = [];

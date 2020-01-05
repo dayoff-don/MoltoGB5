@@ -1,4 +1,4 @@
-# frontvue2
+# frontvue
 
 ## Project setup
 ```

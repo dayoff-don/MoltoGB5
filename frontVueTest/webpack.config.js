@@ -11,6 +11,23 @@ module.exports = {
     app: path.join(__dirname, 'main'),
   },
   module: {
+    rules: [
+      { test: /\.js$/, loader: 'babel-loader' },
+      { test: /\.vue$/,/* use: 'vue-loader',*/ loader: 'vue-loader',  options: {loaders: {js: 'babel-loader!eslint-loader'}}},
+      { test: /\.css$/, use: ['vue-style-loader', 'css-loader']},
+    ]
+  },
+  plugins: [
+    new VueLoaderPlugin(),
+  ],
+  output: {
+    filename: '[name].js',
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/dist',
+  },
+};
+
+/*
     rules: [{
       test: /\.vue$/,
       use: 'vue-loader',
@@ -22,12 +39,4 @@ module.exports = {
       ]
     }],
   },
-  plugins: [
-    new VueLoaderPlugin(),
-  ],
-  output: {
-    filename: '[name].js',
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/dist',
-  },
-};
+*/
