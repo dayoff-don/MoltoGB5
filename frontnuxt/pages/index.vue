@@ -38,7 +38,8 @@ export default {
 }
 </script>
 
-<style>
+<style long="scss">
+/*scoped을 사용할경우는 이파일에서만 적용*/
 .container {
   margin: 0 auto;
   min-height: 100vh;
