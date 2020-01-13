@@ -1,8 +1,8 @@
 <?php
 include_once('./_common.php');
 
-goto_url(G5_URL.'/frontVue/');
-goto_url(G5_URL.'/frontReact/');
+//goto_url(G5_URL.'/frontnuxt/dist');
+//goto_url(G5_URL.'/frontreact/');
 
 
 define('_INDEX_', true);
