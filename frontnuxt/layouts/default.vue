@@ -1,8 +1,18 @@
 <template>
   <div>
+    <TheNavbar/>
     <nuxt />
   </div>
 </template>
+
+<script>
+import TheNavbar from '@/layouts/commands/TheNavbar'
+export default {
+  components:{
+    TheNavbar
+  }
+}
+</script>
 
 <style>
 html {
