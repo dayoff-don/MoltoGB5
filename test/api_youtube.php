@@ -10,7 +10,7 @@
 <body>
 
 
-<iframe id="face" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fcnvc1365&amp;width=398&amp;height=206&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=297372790454280" scrolling="no" frameborder="0" style=" overflow:hidden; width:398px; height:206px;" allowtransparency="true"></iframe>
+<iframe id="face" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fcnvc1365&amp;width=400&amp;height=298&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=297372790454280" scrolling="no" frameborder="0" style=" overflow:hidden; width:400px; height:298px;" allowtransparency="true"></iframe>
 <br>
 <br>
 <br>
@@ -62,9 +62,9 @@
 			message: 'HI YOUTUBE AND VUE JS'
 		  },
 		  methods: {
-			reverseMessage: function () {
-			  this.message = this.message.split('').reverse().join('')
-			}
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('')
+        }
 		  }
 		});
     </script>
