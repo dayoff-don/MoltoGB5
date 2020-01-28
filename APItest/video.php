@@ -6,7 +6,7 @@
 [
     {
         "tit" : "video01",
-        "src" : "/img/test01.mp4#t=00:00:03",
+        "src" : "https://content.jwplatform.com/videos/t5fw1YT5-mq6Ajdo6.mp4",
         "playTime" : "480",
         "professor" : "prName01",
         "like" : "0",
@@ -17,7 +17,7 @@
     },
     {
         "tit" : "video02",
-        "src" : "/img/test02.mp4",
+        "src" : "https://content.jwplatform.com/videos/ncq447MB-mq6Ajdo6.mp4",
         "playTime" : "480",
         "professor" : "prName02",
         "like" : "0",
@@ -28,7 +28,7 @@
     },
     {
         "tit" : "video03",
-        "src" : "/img/test03.mp4",
+        "src" : "https://content.jwplatform.com/videos/uV8TC8PD-mq6Ajdo6.mp4",
         "playTime" : "480",
         "professor" : "prName03",
         "like" : "0",
@@ -39,7 +39,7 @@
     },
     {
         "tit" : "video04",
-        "src" : "/img/test04.mp4",
+        "src" : "https://content.jwplatform.com/videos/2inImofD-mq6Ajdo6.mp4",
         "playTime" : "480",
         "professor" : "prName04",
         "like" : "0",
@@ -50,7 +50,7 @@
     },
     {
         "tit" : "video05",
-        "src" : "/img/test05.mp4",
+        "src" : "https://content.jwplatform.com/videos/I0Cqq6UH-mq6Ajdo6.mp4",
         "playTime" : "480",
         "professor" : "prName05",
         "like" : "0",

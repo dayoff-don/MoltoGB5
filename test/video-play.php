@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>비디오 테스트</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="/css/sass/jmodule.css">
-
-    
+    <?/*
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    */?>
+    <script src="https://cdn.jwplayer.com/libraries/7aXLpnrC.js"></script>
 </head>
 <body class="T_ds_table T_ht_p100 U_mg_ct T_wd_full">
     
@@ -29,6 +34,7 @@
     </header>
 
     <div id="app" class="">
+        test:<br>
         0: {{setVideo}}
         <br/>
         1: {{setVideo.tit}}
@@ -48,10 +54,13 @@
 
         <button type="button" v-on:click="test01">테스트</button>
         <br/>
+        <div id="myElement"></div>
         <div style="max-width:1200px" class="T_wd_full U_mg_ct">
             <div class="T_fl_lt">
+                <!--
                 <video width="400" height="240" controls v-bind:src="setVideo.src" >
                 </video>
+                -->
                 <div>
                     <h3>
                         <span>과목명: {{setVideo.category}}</span>
@@ -85,12 +94,12 @@
                     </li>
                 </ul>
             </div>
-
         </div> 
     </div>
 
-    <script>
+    <script type="text/babel">
 
+    
     const today = new Date();
 	const app = new Vue({
 		mode: 'production',
@@ -119,7 +128,9 @@
                     this.setVideo = this.videos[0];
                     console.log(this.videos);
                     console.log(this.setVideo);
-                    
+                    jwplayer("myElement").setup({
+                        file: this.setVideo.src
+                    });
                 }).catch(error => {
                 console.log("에러입니다. \n"+error);
                 this.errored = true;
@@ -131,6 +142,10 @@
             changeVideo(e){
                 console.log(e);
                 this.setVideo = this.videos[e];
+                
+                jwplayer("myElement").setup({
+                        file: this.setVideo.src
+                });
             },
 			onSubmitForm(e){
 				
