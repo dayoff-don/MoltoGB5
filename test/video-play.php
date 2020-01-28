@@ -29,35 +29,37 @@
     </header>
 
     <div id="app" class="">
-        1: {{videos.videos}}
+        0: {{setVideo}}
         <br/>
-        2: {{videos.name}}
+        1: {{setVideo.tit}}
         <br/>
-        2: {{videos.src}}
+        2: {{setVideo.src}}
         <br/>
-        2: {{videos.playTime}}
+        3: {{setVideo.playTime}}
         <br/>
-        2: {{videos.professor}}
+        4: {{setVideo.professor}}
         <br/>
-        2: {{videos.category}}
+        5: {{setVideo.category}}
         <br/>
-        2: {{videos.content}}
+        6: {{setVideo.content}}
         <br/>
-        
+        7: {{setVideo.professorImg}}
+        <br/>
+
+        <button type="button" v-on:click="test01">테스트</button>
+        <br/>
         <div style="max-width:1200px" class="T_wd_full U_mg_ct">
             <div class="T_fl_lt">
-                <video width="400" height="240" controls>
-                    <source v-bind:src="setSrc" type="video/mp4">
-                    Your browser does not support the video tag.    
+                <video width="400" height="240" controls v-bind:src="setVideo.src" >
                 </video>
                 <div>
                     <h3>
-                        <span>과목명</span>
-                        <span>강의명</span>
+                        <span>과목명: {{setVideo.category}}</span>
+                        <span>강의명: {{setVideo.tit}}</span>
                     </h3>
                     <div>
-                        <img src="" alt="교수 사진">
-                        <span>교수명</span>
+                        <img v-bind:src="setVideo.professorImg" alt="교수 사진">
+                        <span>교수명: {{setVideo.professor}}</span>
                     </div>
                     <ul class="T_fl_Clt clear">
                         <li><a href="">[모달팝업]강의정보</a></li>
@@ -71,43 +73,15 @@
                 </div>
                 <p>강의요약설명</p>
             </div>
-            <div>
+            <div class="T_fl_rt">
                 <h3>다음강좌</h3>
                 <ul>
-                    <li>
-                        <a href="">
-                            <img src="" alt="동영상 섬네일">
-                            <h4>동영상 제목</h4>
-                            <span>강의 교수명</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="" alt="동영상 섬네일">
-                            <h4>동영상 제목</h4>
-                            <span>강의 교수명</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="" alt="동영상 섬네일">
-                            <h4>동영상 제목</h4>
-                            <span>강의 교수명</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="" alt="동영상 섬네일">
-                            <h4>동영상 제목</h4>
-                            <span>강의 교수명</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="" alt="동영상 섬네일">
-                            <h4>동영상 제목</h4>
-                            <span>강의 교수명</span>
-                        </a>
+                    <li v-for="(data, index) in videos" :key="index" style="border:1px solid red" >
+                        <button type="button" v-on:click="changeVideo(index)">
+                            <img :src="data.thumbnail" alt="동영상 섬네일">
+                            <h4>[동영상분류:{{data.category}}]동영상 제목 : {{data.tit}} </h4>
+                            <span>강의 교수명 : {{data.professor}}</span>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -125,28 +99,38 @@
             videos:[],
             setVideo: [],
             setSrc : [],
+            errored : false,
+            loading : false,
+            setType:'video/mp4'
 		},
         created(){
-           this.fetchData()
+           this.fetchData();
         },
         methods:{
+            test01(e){
+                console.log("??");
+                console.log(this.videos);
+            },
             fetchData() {
                 axios.get('/APItest/video.php')
                 .then(result => {
-                    console.log(result.data);
-                    console.log(result.data.videos[0]);
+                    console.log('json 반환2');
                     this.videos = result.data;
+                    this.setVideo = this.videos[0];
                     console.log(this.videos);
+                    console.log(this.setVideo);
+                    
                 }).catch(error => {
-                console.log(error)
-                this.errored = true
+                console.log("에러입니다. \n"+error);
+                this.errored = true;
                 }).finally(() => this.loading = false);
             },
             removeData(e){
 
             },
-            chageData(e){
-           
+            changeVideo(e){
+                console.log(e);
+                this.setVideo = this.videos[e];
             },
 			onSubmitForm(e){
 				
