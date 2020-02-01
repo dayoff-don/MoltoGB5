@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="kr" class="T_ht_p100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>깃허브 정보 가져오기</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/sass/jmodule.css">
+
+    <style>
+        #app{margin:0 auto;padding:50px 0;width: 100%;}
+        #app > div{max-width:600px;width:100%;overflow: hidden;box-sizing: border-box;padding:0 1.5%;}
+        #chUser input{width:80%;border:1px solid rgb(35, 154, 59);height:60px;border-right: 0;}
+        #chUser button{background: rgb(35, 154, 59);height:60px;width:20%;color:#fff}
+        .userInfo{margin-bottom:20px}
+        .userInfo div{margin: 2px 0;padding:5px 0}
+        .userInfo div:after{content:"";clear:both;display: block;}
+        .userInfo div span{float:right}
+
+        #userInfo ul{padding-bottom: 10px;}
+        #userInfo ul li{border-radius: 10px;box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);padding:20px 4% 20px 25%;
+            background-size: 15% auto!important;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+             #chUser input, #chUser button{height:50px}
+        }
+    </style>
+</head>
+<body class="T_ds_table T_ht_p100 U_mg_ct T_wd_full">
+    
+    <div id="app" class="T_ds_cell T_vt_md">
+        <div class="U_mg_ct">
+            <h1 class="U_ft_fm05 T_ft_ct T_ft_rem30 U_ft_c000 T_mg_btm10">깃허브탐정</h1> 
+            <p class="T_ft_ct T_mg_btm20 T_ft_rem12">정보를 보고싶은 유저의 이름을 적어보세요.</p>
+
+            <form action="" v-on:submit="onSubmitForm" id="chUser" class="clear T_fl_Clt T_mg_top20 T_ft_rem15">
+                <input type="text" name=""  id="" v-model="userName">
+                <button>검색</button>
+            </form>     
+              
+            <div id="userInfo" class="T_ps_rl T_mg_top20"  v-if="show">
+                <ul>
+                    <li class="T_ps_rl T_fl_Clt clear" v-bind:style="makeUrl(userInfo.avatar_url)">
+                        <div  class="">
+                            <strong class="T_ft_rem14 T_ds_block U_ft_c333 T_mg_btm10">{{userInfo.login}}</strong>
+                            <p class="T_ft_rem11 T_mg_btm10">{{loadAppData(userInfo.login)}}</p>
+                            <a :href="userInfo.url" traget="_blank" class="T_ft_rem9 U_ft_c777">▶ view Git </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div> 
+    </div>
+
+    <script>
+
+	const app = new Vue({
+		mode: 'production',
+		el:'#app',
+		data:{
+            show : false,
+            userName: 'dogcolley',
+            userInfo: new Object(),
+            AppData: {
+                dogcolley : '앱에 저장된 그의정보: 그는 친절하고 착한개밥입니다.'
+            },
+		},
+		methods:{
+            makeUrl(url){
+                console.log("?");
+                console.log(`background-url: url("${url}")`);
+                return `background: url("${url}") no-repeat 5% center`;
+            },
+            loadAppData(dataName){
+                for (let [key, value] of Object.entries(this.AppData)) {
+                    if(key == dataName)return value;
+                }
+                return  this.AppData.dataName;
+            },
+            removeData(e){
+                this.userName = '';
+                this.userInfo = new Object();
+            },
+            chageData(e){
+                
+            },
+			onSubmitForm(e){
+				e.preventDefault();
+                axios.get(`https://api.github.com/users/${this.userName}`).then(res=>{
+                    console.log(res.data);
+                    this.show = true;
+                    this.userInfo = res.data;
+             
+                    /*
+                    if(res.data.message == 0){
+                        alert("유저정보가 없습니다.");
+                    }else{
+                        this.setName = this.userName;
+                        this.years = res.data.years;
+                        this.setYear = this.years[0].year;
+                        this.contributions = res.data.contributions;
+                        this.contributions.forEach(element => {
+                            const yy = parseInt(element.date.substr(0, 4), 10);
+                            if( yy == this.setYear ){
+                                if(dateDiff(element.date,this.today) == 0 && element.count > 0){
+                                    console.log(dateDiff(element.date,this.today) == 0 );
+                                    console.log(element.count );
+                                    this.todayComit = true;
+                                    console.log("인증");
+                                };
+                                this.showContributions.unshift(element);
+                            }
+                        });
+                        const ckeckData = new Date(this.setYear+'-'+1+'-'+1);
+                        for(let i =1; i< ckeckData.getDay(); i++){
+                            this.showContributions.unshift('');
+                        }
+                        */
+                }).catch( err => {
+                    //console.log(err,"에러임");
+                    alert("이유저는 없는 유저에유");
+                    this.show = false;
+                });
+		    },
+        }
+	});
+        
+    </script>
+</body c>
+</html>
