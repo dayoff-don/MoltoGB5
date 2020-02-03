@@ -46,7 +46,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         #hd_pop2 .swiper-wrapper{height:600px}
         #hd_pop2 h2{width:0;height:0;overflow:hidden;}
         #hd_pop2 .btn_wraps{position:absolute;z-index:1000;right:10px;bottom:10px;height:30px;border:0;}
-        #hd_pop2 .btn_wraps > *{float:left;height:20px;border:0;padding:0 10px}
+        #hd_pop2 .btn_wraps > *{float:left;height:20px;border:0;padding:0 10px;background:#000;color:#fff}
         #hd_pop2 .btn_wraps > *:first-child{border-right:1px solid #000}
         #hd_pop2 .swiper-pagination-bullet{background:#fff}
         #hd_pop2 .hd_pops{border:0}
