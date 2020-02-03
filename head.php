@@ -21,6 +21,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
 
+
 <!-- 상단 시작 { -->
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
@@ -28,9 +29,45 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
     <?php
     if(defined('_INDEX_')) { // index에서만 실행
-        include G5_BBS_PATH.'/newwin.inc2.php'; // 팝업레이어
+    ?>
+
+  
+    <?php
+        include G5_BBS_PATH.'/newwin.inc2.php'; // 팝업레이어 롤링 Type
+    ?>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    
+    <style>
+        #hd_pop2{width:400px;height:650px;position:absolute;top:200px;left:2%;background:#000}
+        #hd_pop2 .swiper-wrapper{height:600px}
+        #hd_pop2 h2{width:0;height:0;overflow:hidden;}
+        #hd_pop2 .btn_wraps{position:absolute;z-index:1000;right:10px;bottom:10px;height:30px;border:0;}
+        #hd_pop2 .btn_wraps > *{float:left;height:20px;border:0;padding:0 10px}
+        #hd_pop2 .btn_wraps > *:first-child{border-right:1px solid #000}
+        #hd_pop2 .swiper-pagination-bullet{background:#fff}
+        #hd_pop2 .hd_pops{border:0}
+        #hd_pop2 .swiper-pagination{text-align:left;padding-left:40px;bottom:22px}
+    </style>
+
+    <script>
+    $(function(){
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    });
+    </script>
+
+
+    <?php
     }
     ?>
+
     <div id="tnb">
         <div class="inner">
             <?php if(defined('G5_COMMUNITY_USE') == false || G5_COMMUNITY_USE) { ?>
