@@ -28,7 +28,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
     <?php
     if(defined('_INDEX_')) { // index에서만 실행
-        include G5_BBS_PATH.'/newwin.inc.php'; // 팝업레이어
+        include G5_BBS_PATH.'/newwin.inc2.php'; // 팝업레이어
     }
     ?>
     <div id="tnb">
