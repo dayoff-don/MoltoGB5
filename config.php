@@ -5,8 +5,8 @@
 ********************/
 
 define('G5_VERSION', '그누보드5');
-define('G5_GNUBOARD_VER', '5.4.1.3');
-define('G5_YOUNGCART_VER', '5.4.1.3');
+define('G5_GNUBOARD_VER', '5.4.1.8');
+define('G5_YOUNGCART_VER', '5.4.1.8');
 
 // 이 상수가 정의되지 않으면 각각의 개별 페이지는 별도로 실행될 수 없음
 define('_GNUBOARD_', true);
@@ -27,8 +27,17 @@ if (PHP_VERSION >= '5.1.0') {
 보안서버주소가 없다면 공란으로 두시면 되며 보안서버주소 뒤에 / 는 붙이지 않습니다.
 입력예) https://www.domain.com:443/gnuboard5
 */
-define('G5_DOMAIN', '');
+define('G5_DOMAIN', 'http://grassgardener.kr/');
 define('G5_HTTPS_DOMAIN', '');
+//https://grassgardener.kr/
+
+// https 접속이 아닐시 강제로 리다이렉트
+
+/*
+if(!isset($_SERVER["HTTPS"])) { 
+	header('Location: https://grassgardener.kr/');
+}
+*/
 
 // 디버깅 상수, 실제 서버운영시 false 로 설정해 주제요.
 define('G5_DEBUG', false);

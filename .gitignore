@@ -3,8 +3,13 @@
 .metadata
 
 # node_modules
-#
 node_modules
 
 # gnu5
 data
+
+# vscode
+.vscode
+
+# sll
+.well-known

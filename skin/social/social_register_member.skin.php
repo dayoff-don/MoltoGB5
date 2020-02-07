@@ -64,7 +64,19 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
                 <p class="email_msg"><?php echo $email_msg; ?></p>
             </td>
         </tr>
-
+        <tr>
+            <th scope="row"><label for="mb_mb1">깃허브 네임<strong class="sound_only">필수</strong></label></th>
+            <td>
+                <input type="text" name="mb_mb1" value="<?php echo isset($user_email)?$user_email:''; ?>" id="reg_mb_email" required class="frm_input email required" size="70" maxlength="100" placeholder="이메일을 입력해주세요." >
+                <p class="email_msg"><?php echo $email_msg; ?></p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="mb_hp">연락처<strong class="sound_only">필수</strong></label></th>
+            <td>
+                <input type="text" name="mb_hp" id="mb_hp" required class="frm_input email required" size="70" maxlength="100" placeholder="연락처를 입력해주세요." >
+            </td>
+        </tr>
         </tbody>
         </table>
     </div>
@@ -77,7 +89,7 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
     <!-- 새로가입 끝 -->
 
     <!-- 기존 계정 연결 -->
-
+    <?/*
     <div class="member_connect">
         <p class="strong">혹시 기존 회원이신가요?</p>
         <button type="button" class="connect-opener btn-txt" data-remodal-target="modal">
@@ -115,6 +127,7 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
 
             </form>
         </div>
+        */?>
     </div>
 
     <script>

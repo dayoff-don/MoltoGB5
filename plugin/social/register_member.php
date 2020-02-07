@@ -39,7 +39,7 @@ set_session("ss_token", $token);
 
 $g5['title'] = '소셜 회원 가입 - '.social_get_provider_service_name($provider_name);
 
-include_once(G5_BBS_PATH.'/_head.php');
+include_once(G5_BBS_PATH.'/_head.sub.php');
 
 $register_action_url = https_url(G5_PLUGIN_DIR.'/'.G5_SOCIAL_LOGIN_DIR, true).'/register_member_update.php';
 $login_action_url = G5_HTTPS_BBS_URL."/login_check.php";
@@ -49,5 +49,5 @@ $readonly = ($w=='u') ? 'readonly' : '';
 
 include_once(get_social_skin_path().'/social_register_member.skin.php');
 
-include_once(G5_BBS_PATH.'/_tail.php');
+include_once(G5_BBS_PATH.'/_tail.sub.php');
 ?>

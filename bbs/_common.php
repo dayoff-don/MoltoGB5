@@ -8,4 +8,12 @@ if(defined('G5_COMMUNITY_USE') && G5_COMMUNITY_USE === false) {
 
     define('_SHOP_', true);
 }
+
+$mt_url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+if( strpos($mt_url, 'login') !== false || strpos($mt_url, 'logout') !== false || !$is_member ) {
+    
+} else {  
+    goto_url(G5_BBS_URL.'/login.php'); 
+} 
+
 ?>

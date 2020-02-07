@@ -113,15 +113,17 @@ function short_url_clean($string_url, $add_qry=''){
         
         $array_page_names = run_replace('url_clean_page_names', array('board', 'write', 'content'));
 
-        if( strpos($string_url, G5_BBS_URL) === false || ! in_array($page_name, $array_page_names) ){   //게시판이 아니면 리턴
+        if( stripos(preg_replace('/^https?:/i', '', $string_url), preg_replace('/^https?:/i', '', G5_BBS_URL)) === false || ! in_array($page_name, $array_page_names) ){   //게시판이 아니면 리턴
             return run_replace('false_short_url_clean', $string_url, $url, $page_name, $array_page_names);
         }
 
         $return_url = '';
         parse_str($url['query'], $vars);
-
+		
+		/*
         // 예) Array ( [scheme] => http [host] => sir.kr [path] => /bbs/board.php [query] => wr_id=1110870&bo_table=cm_free&cpage=1 [fragment] => c_1110946 )
-        //while(list($k,$v) = each($vars)) $page_name .= "/".$v;
+		foreach($vars as $k => $v) { $page_name .= "/".$v; }
+		*/
         
         if( $page_name === 'write' ){
             $vars['action'] = 'write';
@@ -173,8 +175,8 @@ function short_url_clean($string_url, $add_qry=''){
         if( $add_qry ){
             $add_param .= $add_param ? '&amp;'.$add_qry : '?'.$add_qry;
         }
-
-        while(list($k,$v) = each($s)) $return_url .= '/'.$v;
+		
+		foreach($s as $k => $v) { $return_url .= '/'.$v; }
 
         return $host.$return_url.$add_param.$fragment;
     }

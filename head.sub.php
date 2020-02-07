@@ -2,8 +2,6 @@
 // 이 파일은 새로운 파일 생성시 반드시 포함되어야 함
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
-run_event('head_sub');
-
 // 테마 head.sub.php 파일
 if(!defined('G5_IS_ADMIN') && defined('G5_THEME_PATH') && is_file(G5_THEME_PATH.'/head.sub.php')) {
     require_once(G5_THEME_PATH.'/head.sub.php');
@@ -44,14 +42,14 @@ header("Pragma: no-cache"); // HTTP/1.0
 <head>
 <meta charset="utf-8">
 <?php
-if (G5_IS_MOBILE) {
-    echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">'.PHP_EOL;
-    echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
-    echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
-} else {
-    echo '<meta http-equiv="imagetoolbar" content="no">'.PHP_EOL;
-    echo '<meta http-equiv="X-UA-Compatible" content="IE=Edge">'.PHP_EOL;
-}
+
+//반응형 추가 메타
+echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
+echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
+echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
+//echo '<meta http-equiv="imagetoolbar" content="no">'.PHP_EOL;
+echo '<meta http-equiv="X-UA-Compatible" content="IE=Edge">'.PHP_EOL;
+
 
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
@@ -107,6 +105,27 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
+
+
+<!-- jsh add module start -->
+
+<?php
+if(!defined('G5_IS_ADMIN')){
+	/* react And Babel JS ES6 */
+	//add_javascript('<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>',0);
+	//add_javascript('<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>',0);
+	//add_javascript('<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>',0);
+	/*vue And Babel JS ES6*/
+	add_javascript('<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>', 0);
+	add_javascript('<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>', 0); //개발모드
+	//add_javascript('<script src="https://cdn.jsdelivr.net/npm/vue"></script>', 0); //유통모드
+	//add_javascript('<script src="'.G5_JS_URL.'/extend.js?ver=1.0.0"></script>', 0);
+    add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/jmodule.css?ver=1.0.0"> ',0);
+}
+?>
+
+<!-- jsh add module end-->
+
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 <?php

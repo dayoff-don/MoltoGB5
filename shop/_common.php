@@ -1,5 +1,6 @@
 <?php
 include_once('../common.php');
+goto_url("../index.php");
 
 if (isset($_REQUEST['sort']) && !preg_match("/(--|#|\/\*|\*\/)/", $_REQUEST['sort']))  {
     $sort = trim($_REQUEST['sort']);
