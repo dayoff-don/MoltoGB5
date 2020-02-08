@@ -10,6 +10,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/remodal/remodal.css">
 add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/remodal/remodal-default-theme.css">', 12);
 add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css">', 13);
 add_javascript('<script src="'.G5_JS_URL.'/remodal/remodal.js"></script>', 10);
+add_javascript('<script src="https://unpkg.com/axios/dist/axios.min.js"></script>', 15); //aixos
 
 $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.다른 이메일을 입력해 주세요.' : '';
 ?>
@@ -60,21 +61,20 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
         <tr>
             <th scope="row"><label for="reg_mb_email">E-mail<strong class="sound_only">필수</strong></label></th>
             <td>
-                <input type="text" name="mb_email" value="<?php echo isset($user_email)?$user_email:''; ?>" id="reg_mb_email" required class="frm_input email required" size="70" maxlength="100" placeholder="이메일을 입력해주세요." >
+                <input type="text" name="mb_email" value="<?php echo isset($user_email)?$user_email:''; ?>" <?php echo isset($user_email)?'readonly':''; ?> id="reg_mb_email" required class="frm_input email required" size="70" maxlength="100" placeholder="이메일을 입력해주세요." >
                 <p class="email_msg"><?php echo $email_msg; ?></p>
             </td>
         </tr>
         <tr>
-            <th scope="row"><label for="mb_mb1">깃허브 네임<strong class="sound_only">필수</strong></label></th>
+            <th scope="row"><label for="mb_1">깃허브 네임<strong class="sound_only">필수</strong></label></th>
             <td>
-                <input type="text" name="mb_mb1" value="<?php echo isset($user_email)?$user_email:''; ?>" id="reg_mb_email" required class="frm_input email required" size="70" maxlength="100" placeholder="이메일을 입력해주세요." >
-                <p class="email_msg"><?php echo $email_msg; ?></p>
+                <input type="text" name="mb_1" id="mb_1" required class="frm_input  required" size="70" maxlength="100" placeholder="깃허브 네임을 입력해주세요." >
             </td>
         </tr>
         <tr>
             <th scope="row"><label for="mb_hp">연락처<strong class="sound_only">필수</strong></label></th>
             <td>
-                <input type="text" name="mb_hp" id="mb_hp" required class="frm_input email required" size="70" maxlength="100" placeholder="연락처를 입력해주세요." >
+                <input type="text" name="mb_hp" id="mb_hp" required class="frm_input required" size="70" maxlength="100" placeholder="연락처를 입력해주세요." >
             </td>
         </tr>
         </tbody>
@@ -127,15 +127,26 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
 
             </form>
         </div>
-        */?>
     </div>
+    */?>
 
     <script>
-
-    // submit 최종 폼체크
+    var mtA = false;
+    $(function(){
+        $('#mb_1').on('change',function(){
+            var Mtag = $(this); 
+            axios.get('https://api.github.com/users/'+$(this).val()).then(res=>{
+                mtA = true;
+            }).catch(function(err){
+                alert('존재하지 않습니다.');
+                Mtag.focus();
+                mtA = false;
+            });
+        });
+    });
+  
     function fregisterform_submit(f)
     {
-
         if (!f.agree.checked) {
             alert("회원가입약관의 내용에 동의하셔야 회원가입 하실 수 있습니다.");
             f.agree.focus();
@@ -158,12 +169,16 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
                 return false;
             }
         }
+        if(!mtA){
+            alert('깃허브 계정을 입력해주세요.');
+            return false;
+        }
 
         document.getElementById("btn_submit").disabled = "disabled";
 
         return true;
     }
-
+    <?/*
     function flogin_submit(f)
     {
         var mb_id = $.trim($(f).find("input[name=mb_id]").val()),
@@ -175,6 +190,7 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
 
         return true;
     }
+    */?>
 
     jQuery(function($){
         if( jQuery(".toggle .toggle-title").hasClass('active') ){

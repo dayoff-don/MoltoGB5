@@ -1,7 +1,7 @@
 <?php
 include_once('./_common.php');
 
-//goto_url(G5_URL.'/html');
+goto_url(G5_URL.'/html');
 
 define('_INDEX_', true);
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가

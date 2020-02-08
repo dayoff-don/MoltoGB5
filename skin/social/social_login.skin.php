@@ -16,8 +16,33 @@ if( G5_SOCIAL_USE_POPUP ) {
 
 add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css">', 10);
 ?>
+    <?php if( G5_SOCIAL_USE_POPUP && !$social_pop_once ){
+        $social_pop_once = true;
+    ?>
+    <script>
+        jQuery(function($){
+            $(".sns-wrap").on("click", "a.social_link", function(e){
+                e.preventDefault();
 
-<div id="sns_login" class="login-sns sns-wrap-32 sns-wrap-over">
+                var pop_url = $(this).attr("href");
+                var newWin = window.open(
+                    pop_url, 
+                    "social_sing_on", 
+                    "location=0,status=0,scrollbars=1,width=600,height=500"
+                );
+
+                if(!newWin || newWin.closed || typeof newWin.closed=='undefined')
+                        alert('브라우저에서 팝업이 차단되어 있습니다. 팝업 활성화 후 다시 시도해 주세요.');
+
+                return false;
+            });
+        });
+    </script>
+    <?php } ?>
+    <a href="<?php echo $self_url;?>?provider=kakao&amp;url=<?php echo $urlencode;?>" class="sns-icon social_link sns-kakao" title="카카오">로그인</a>
+<?/*
+
+<div id="sns_login" class="login-sns sns-wrap-32 sns-wrap-over" style="border-top:0">
     <h3>소셜계정으로 로그인</h3>
     <div class="sns-wrap">
         <?php if( social_service_check('naver') ) {     //네이버 로그인을 사용한다면 ?>
@@ -83,3 +108,4 @@ add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css
 
     </div>
 </div>
+*/?>

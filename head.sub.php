@@ -49,7 +49,7 @@ echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
 echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
 //echo '<meta http-equiv="imagetoolbar" content="no">'.PHP_EOL;
 echo '<meta http-equiv="X-UA-Compatible" content="IE=Edge">'.PHP_EOL;
-
+ 
 
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
@@ -118,8 +118,9 @@ if(!defined('G5_IS_ADMIN')){
 	/*vue And Babel JS ES6*/
 	add_javascript('<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>', 0);
 	add_javascript('<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>', 0); //개발모드
-	//add_javascript('<script src="https://cdn.jsdelivr.net/npm/vue"></script>', 0); //유통모드
-	//add_javascript('<script src="'.G5_JS_URL.'/extend.js?ver=1.0.0"></script>', 0);
+    //add_javascript('<script src="https://cdn.jsdelivr.net/npm/vue"></script>', 0); //유통모드
+    add_javascript('<script src="https://unpkg.com/axios/dist/axios.min.js"></script>', 0); //aixos
+    //add_javascript('<script src="'.G5_JS_URL.'/extend.js?ver=1.0.0"></script>', 0); //j-jmodule
     add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/jmodule.css?ver=1.0.0"> ',0);
 }
 ?>
@@ -128,6 +129,7 @@ if(!defined('G5_IS_ADMIN')){
 
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
+
 <?php
 if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
     $sr_admin_msg = '';

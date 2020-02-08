@@ -3,6 +3,7 @@ include_once('./_common.php');
 include_once(G5_LIB_PATH.'/register.lib.php');
 include_once(G5_LIB_PATH.'/mailer.lib.php');
 
+
 if( ! $config['cf_social_login_use'] ){
     alert('소셜 로그인을 사용하지 않습니다.', G5_URL);
 }
@@ -92,6 +93,8 @@ $mb_open = (isset($_POST['mb_open']) && $_POST['mb_open']) ? 1 : 0;
 $sql = " insert into {$g5['member_table']}
             set mb_id = '{$mb_id}',
                 mb_password = '".get_encrypt_string($mb_password)."',
+                mb_hp = '{$mb_hp}',
+                mb_1 = '{$mb_1}',
                 mb_name = '{$mb_name}',
                 mb_nick = '{$mb_nick}',
                 mb_nick_date = '".G5_TIME_YMD."',
