@@ -1,10 +1,11 @@
 <?
     include_once(G5_PATH."/head.sub.php");
     add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/skin/thema/gs.css?ver=1.0.0"> ',0);
+    if(!$Jmode)$Jmode = 'normal';
 ?>
 
 <div id="loading"></div>
-<div id="app" class="T_wd_full T_ht_full"> 
+<div id="app" data-mode="<?=$Jmode?>" class="T_wd_full T_ht_full"> 
     <?if(!$is_member){?>
     <div class="T_ds_table T_ht_full T_wd_full U_mg_ct gs_bg01 T_ps_rl" style="max-width:640px">
         <div class=" T_ds_cell T_ht_p80  T_vt_md" >

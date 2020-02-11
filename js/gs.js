@@ -34,7 +34,10 @@ function dateDiff(_date1, _date2) {
     return diff;
 }
 
-if(g5_is_member){
+const mode = document.getElementById('app').getAttribute('data-mode')
+
+console.log(mode);
+if(mode == 'git01'){
     const today = new Date();
     const app = new Vue({
         mode: 'production',

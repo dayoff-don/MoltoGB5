@@ -1,4 +1,5 @@
 <?php
+     $Jmode = 'git01';
     include_once("./_common.php");
     include_once("./_head.php");
 ?>
@@ -8,7 +9,7 @@
         <div>검색대상: <span>{{setName}}</span></div>
         <div>오늘 : <span>{{today}}</span> </div>
         <div>사용년도 데이터 : <span>{{setYear}} </span></div>
-        <div>오늘 커밋여부 : <span>{{todayComit ? "인증함" : "인증안함"}}<button v-if="todayComit">인증하기</button></span></div>
+        <div>오늘 커밋여부 : <span>{{todayComit ? "인증함" : "인증안함"}}<button @click="" v-if="todayComit">인증하기</button></span></div>
         
     </div>
     <ul class="commitYear T_ly_3   T_ft_ct ">
