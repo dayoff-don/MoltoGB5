@@ -22,7 +22,7 @@
             transform: rotate(360deg);
   }
 }
-
+ 
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%;
@@ -45,6 +45,18 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.sir_bg01 {
+  background: #239a3b;
+}
+
+.sir_cl01 {
+  color: #239a3b;
+}
+
+.sir_bd01 {
+  border-color: #239a3b;
 }
 
 body, html {

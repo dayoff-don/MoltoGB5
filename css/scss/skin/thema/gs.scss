@@ -72,7 +72,9 @@ $t_cl01 : rgba(35, 154, 59,1);
 $t_cl02 : #f7931d; 
 $t_cl03 : #ff7800;
 
-
+.sir_bg01{background: $t_cl01;}
+.sir_cl01{color: $t_cl01;}
+.sir_bd01{border-color: $t_cl01;}
 
 body{ 
     @include respond-to(wide-screens) {}

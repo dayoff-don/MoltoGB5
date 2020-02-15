@@ -41,4 +41,6 @@ if( isset( $_REQUEST["redirect_to_idp"] ) ){
     social_login_session_clear(1);
     social_return_from_provider_page( $provider_name, '', '', '', '' );
 }
+
+if(!$is_member)goto_url(G5_URL.'/plugin/social/register_member.php?provider=Kakao&url=http%3A%2F%2Fgrassgardener.kr%2F%2Fbbs%2Fregister.php');
 ?>
