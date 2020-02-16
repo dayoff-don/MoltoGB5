@@ -212,13 +212,10 @@ if(mode == 'main01'){
 
 $(function(){
     var windowHide = false;
-
-    $(window).load(function(){
         $('#loading').addClass('on');
         setTimeout(() => {
             $('#loading').addClass('on2');
         }, 1000);
-    });
 
     $('.J_toggle_btn').on('click', function(){
         $(this).toggleClass('on').siblings('.J_toggle_con').toggle().toggleClass('on');

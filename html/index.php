@@ -37,7 +37,7 @@
                 <div class="U_ft_fm05 U_ft_cfff T_ps_rl T_ft_rem18 T_lh_14 T_ft_wh300 T_pd_top30">
                     <span class="">이용중인 잔디 정원사 <span>{{set_total}}명</span>,</span>
                     <span class="">오늘은 <span>{{set_today}}명</span>이 인증되었네요.</span>
-                    <a href="<?=G5_URL?>/html/git/git01.php" class="T_ds_block T_mg_top10 T_wd_p60 T_pd_top10 T_pd_btm5 U_bd_rd U_mg_ct T_ps_rl U_bg_c333 U_ft_cfff" style="max-width:400px">인증하러 가기</a>
+                    <a href="<?=G5_URL?>html/git/git01.php" class="T_ds_block T_mg_top10 T_wd_p60 T_pd_top10 T_pd_btm5 U_bd_rd U_mg_ct T_ps_rl U_bg_c333 U_ft_cfff" style="max-width:400px">인증하러 가기</a>
                 </div>
             </div>
         </div>
