@@ -54,6 +54,8 @@ if(mode == 'git01'){
             contributions : [],
             showContributions : [],
             todayComit: false,
+            todayCnt: 0,
+            recordTxt : '오늘인증하기'
         },
         created: function () {
             axios.get(g5_url + '/api/gitGetName_api.php').then(res=>{
@@ -102,10 +104,11 @@ if(mode == 'git01'){
                             const yy = parseInt(element.date.substr(0, 4), 10);
                             if( yy == this.setYear ){
                                 if(dateDiff(element.date,this.today) == 0 && element.count > 0){
-                                    console.log(dateDiff(element.date,this.today) == 0 );
-                                    console.log(element.count );
+                                    //console.log(dateDiff(element.date,this.today) == 0 );
+                                    //console.log(element.count );
+                                    //console.log("인증");
                                     this.todayComit = true;
-                                    console.log("인증");
+                                    this.todayCnt = element.count;
                                 };
                                 this.showContributions.unshift(element);
                             }
@@ -134,9 +137,49 @@ if(mode == 'git01'){
                 e.preventDefault();
                 this.makeData();
             },
+            record(){
+                console.log(`${g5_url}api/gitSetToday_api.php`);
+                if(this.todayCnt > 0){
+                    axios.get(`${g5_url}api/gitSetToday_api.php?commit=${this.todayCnt}`).then(res=>{
+                        if(res.data == 'ok' || res.data == 'did')this.recordTxt ="짜란다~";
+                        if(res.data == 'ok')alert("정원사 인증이 완료되었습니다.");
+                        if(res.data == 'did')alert("이미 인증 하셨네요.");
+                        if(res.data == 'err')alert("에러가 났습니다.");
+                    });
+                }
+            },
         }
     });
 }
+
+if(mode == 'main01'){
+    const today = new Date();
+    const app = new Vue({
+        mode: 'production',
+        el:'#app',
+        data:{
+            set_today: 0,
+            set_total: 0
+        },
+        created: function () {
+            this.get_total();
+            this.get_today();
+        },
+        methods:{
+            get_total(){
+                axios.get(`${g5_url}api/g5_member_total.php`).then(res=>{
+                    this.set_total = res.data;
+                });
+            },
+            get_today(){
+                axios.get(`${g5_url}api/g5_git_record_api.php`).then(res=>{
+                    this.set_today = res.data;
+                });
+            }
+        }
+    });
+}
+
 
 $(function(){
     var windowHide = false;

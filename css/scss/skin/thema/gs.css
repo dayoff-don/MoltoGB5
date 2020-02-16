@@ -337,4 +337,50 @@ body, html {
     height: 50px;
   }
 }
+
+.sir_icon01s > * {
+  height: 15px;
+  line-height: 25px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.sir_icon01s > *:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 7.5px;
+  height: 10px;
+  width: 15px;
+  background: #333;
+}
+
+.sir_icon01s > * {
+  margin-top: calc(100% -  125px / 4);
+}
+
+.sir_icon01s > *:first-child {
+  margin-top: 0;
+}
+
+.sir_icon01s > *:nth-child(1):after {
+  background: #c50808;
+}
+
+.sir_icon01s > *:nth-child(2):after {
+  background: #e67315;
+}
+
+.sir_icon01s > *:nth-child(3):after {
+  background: #fabc10;
+}
+
+.sir_icon01s > *:nth-child(4):after {
+  background: #13bee9;
+}
+
+.sir_icon01s > *:nth-child(5):after {
+  background: #1508cc;
+}
 /*# sourceMappingURL=gs.css.map */
