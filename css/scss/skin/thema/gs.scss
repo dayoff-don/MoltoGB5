@@ -92,6 +92,9 @@ body,html{height:100%;}
     .U_on_show{display: block;}
 }
 
+.J_hide01:after{position: absolute;content:"";width:100%;height:100%;top:0;left:0;background: rgba(0,0,0,0.3);}
+.J_hide01{overflow:hidden}
+
 #loading{width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,1);transition:1s all;position:absolute;z-index:999;opacity:1}
 #loading.on{opacity:0}
 #loading.on2{opacity:0;z-index: -999}
@@ -111,11 +114,11 @@ body,html{height:100%;}
 }
 
 #J_ch_btn01.on{display:none}
-
 #contributions_info ul.commitBox li{width:9.5px;height:9.5px;background:none;margin: 5px 2px 0 0;position: relative;float:left}
 #contributions_info ul.commitBox li:nth-child(7n + 1){margin-left:90px}
-#contributions_info ul.commitBox li div{position: absolute;left: 0;top:0;color:#333;width:150px;padding:10px 20px;display:none;}
+#contributions_info ul.commitBox li div{position: absolute;left: 0;top:0;color:#333;width:150px;padding:10px 20px;display:none;transition: 0.5s all;box-sizing: border-box;border:1px solid transparent}
 #contributions_info ul.commitBox li:hover div{display: block;z-index: 90;background: rgba(255,255,255,0.7);}
+#contributions_info ul.commitBox li:hover{border:1px solid $t_cl01}
 #contributions_info ul.commitBox li .weekTitle{position: absolute;left: -60px;;}
 #contributions_info ul.commitYear li{padding:0 10px;margin-top:10px;}
 #contributions_info ul.commitYear {margin-top:10px;margin-bottom:20px}
@@ -126,7 +129,6 @@ body,html{height:100%;}
 .userInfo{margin-bottom:20px}
 .userInfo div{margin: 2px 0;padding:5px 0}
 .userInfo div:after{content:"";clear:both;display: block;}
-.userInfo div span{float:right}
 
 #contributions_info ul.commitBox li:nth-child(21n + 1){clear: both;}
 @media only screen and (max-width: 580px) {

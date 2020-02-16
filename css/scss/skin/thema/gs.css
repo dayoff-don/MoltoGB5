@@ -22,7 +22,7 @@
             transform: rotate(360deg);
   }
 }
- 
+
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%;
@@ -73,6 +73,20 @@ body, html {
 
 .on .U_on_show {
   display: block;
+}
+
+.J_hide01:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.J_hide01 {
+  overflow: hidden;
 }
 
 #loading {
@@ -218,12 +232,21 @@ body, html {
   width: 150px;
   padding: 10px 20px;
   display: none;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid transparent;
 }
 
 #contributions_info ul.commitBox li:hover div {
   display: block;
   z-index: 90;
   background: rgba(255, 255, 255, 0.7);
+}
+
+#contributions_info ul.commitBox li:hover {
+  border: 1px solid #239a3b;
 }
 
 #contributions_info ul.commitBox li .weekTitle {
@@ -282,10 +305,6 @@ body, html {
   content: "";
   clear: both;
   display: block;
-}
-
-.userInfo div span {
-  float: right;
 }
 
 #contributions_info ul.commitBox li:nth-child(21n + 1) {

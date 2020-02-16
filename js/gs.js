@@ -139,6 +139,8 @@ if(mode == 'git01'){
 }
 
 $(function(){
+    var windowHide = false;
+
     $(window).load(function(){
         $('#loading').addClass('on');
         setTimeout(() => {
@@ -148,6 +150,7 @@ $(function(){
 
     $('.J_toggle_btn').on('click', function(){
         $(this).toggleClass('on').siblings('.J_toggle_con').toggle().toggleClass('on');
+        $('body').toggleClass('J_hide01');
     });
 
     $('.J_auto_close').on('mouseenter',function(){

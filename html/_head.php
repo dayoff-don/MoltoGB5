@@ -20,7 +20,7 @@
         </div>
     </div>
     <?}else{?>
-    <div id="J_nav" class="PC_pd_wd50 U_area01 U_mg_ct gs_nav clear T_ps_ab PT_pd_top40 M_pd_top20" style="left:0;right:0;z-index:90">
+    <div id="J_nav" class="PC_pd_wd50 U_area01 U_mg_ct gs_nav clear T_ps_ab PT_pd_top40 M_pd_top20 T_ps_fx" style="left:0;right:0;z-index:90">
         <div class="T_fl_lt J_auto_close T_ft_sz20">
             <button class=" J_toggle_btn" >
                 <i class="fas fa-align-left U_off_show"></i>
@@ -28,13 +28,13 @@
             </button>
             <ul class="T_ps_ab T_mg_Ctop10 T_ft_ct T_ft_sz25 J_toggle_con T_ds_non" style="top:100%">
                 <li><a href="#" class="read_link"><i class="fas fa-user-circle"></i><span class="sound_only">mypage</span></a></li>
-                <li><a href="<?=G5_URL?>" ><i class="fab fa-github"></i><span class="sound_only">gitpage</span></a></li>
+                <li><a href="<?=G5_URL?>/html/git/git01.php" ><i class="fab fa-github"></i><span class="sound_only">gitpage</span></a></li>
                 <li><a href="#" class="read_link"><i class="fas fa-users"></i><span class="sound_only"></span></a></li>
                 <li><a href="#" class="read_link"><i class="fas fa-hands-helping"></i><span class="sound_only">maker info</span></a></li>
                 <li><a href="<?=G5_BBS_URL?>/logout.php"><i class="fas fa-sign-out-alt"></i><span class="sound_only">logout</span></a></li>
             </ul>
         </div>
-        <?if($bo_table || $git_use || true){?>
+        <?if($Jmode == "git01"){?>
         <div class="T_fl_rt clear J_auto_close" >
             <button class="T_ft_sz20 J_toggle_btn" id="J_ch_btn01"><i class="fas fa-search"></i></button>
             <form  v-on:submit="onSubmitForm" class="T_pd_lt20 U_bd_rd clear M_wd_full J_toggle_con sg_chbox T_ds_non" >
