@@ -61,6 +61,7 @@
 
 body, html {
   height: 100%;
+  overflow-y: auto;
 }
 
 :not(.on) .U_on_show {
@@ -193,6 +194,10 @@ body, html {
   padding-top: 11px;
 }
 
+.sg_chbox {
+  background: #fff;
+}
+
 .sg_chbox input[type="text"] {
   width: calc(100% - 60px);
 }
@@ -209,6 +214,11 @@ body, html {
 
 #J_ch_btn01.on {
   display: none;
+}
+
+#contributions_info ul.commitBox {
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #contributions_info ul.commitBox li {
@@ -271,6 +281,7 @@ body, html {
   color: #239a3b;
   border-radius: 55px;
   max-width: 130px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 #contributions_info ul.commitYear li button.active {
@@ -382,5 +393,9 @@ body, html {
 
 .sir_icon01s > *:nth-child(5):after {
   background: #1508cc;
+}
+
+.sir_years_btn > li {
+  background: rgba(255, 255, 255, 0.91);
 }
 /*# sourceMappingURL=gs.css.map */

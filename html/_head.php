@@ -27,6 +27,7 @@
                 <i class="fas fa-align-justify U_on_show"></i>
             </button>
             <ul class="T_ps_ab T_mg_Ctop10 T_ft_ct T_ft_sz25 J_toggle_con T_ds_non" style="top:100%">
+                <li><a href="<?=G5_URL?>" ><i class="fas fa-home"></i>   <span class="sound_only">home</span></a></li>
                 <li><a href="#" class="read_link"><i class="fas fa-user-circle"></i><span class="sound_only">mypage</span></a></li>
                 <li><a href="<?=G5_URL?>/html/git/git01.php" ><i class="fab fa-github"></i><span class="sound_only">gitpage</span></a></li>
                 <li><a href="#" class="read_link"><i class="fas fa-users"></i><span class="sound_only"></span></a></li>

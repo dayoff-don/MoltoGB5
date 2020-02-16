@@ -159,11 +159,18 @@ if(mode == 'main01'){
         el:'#app',
         data:{
             set_today: 0,
-            set_total: 0
+            set_total: 0,
+            set_color: '#333',
+            set_height: '0%',
+            set_txt: 0,
+            set_Max: 0,
         },
         created: function () {
             this.get_total();
             this.get_today();
+            setTimeout(() => {
+                this.get_color();
+            }, 1500);
         },
         methods:{
             get_total(){
@@ -175,6 +182,28 @@ if(mode == 'main01'){
                 axios.get(`${g5_url}api/g5_git_record_api.php`).then(res=>{
                     this.set_today = res.data;
                 });
+            },
+            get_color(){
+                const calcApp = parseInt(this.set_today / this.set_total * 100 ) ;
+                if(calcApp == 100)this.set_color = '#c50808';
+                else if(calcApp > 75)this.set_color = 'rgb(230, 115, 21)';
+                else if(calcApp > 50)this.set_color = 'rgb(250, 188, 16)';
+                else if(calcApp > 25)this.set_color = 'rgb(19, 190, 233)';
+                else this.set_color = 'rgb(21, 8, 204)';
+                this.set_height = calcApp+'%';
+                this.set_Max = calcApp;
+                this.get_text(calcApp);
+            },
+            get_text(calcApp){
+                let num = 0;
+                console.log(calcApp);
+                const mv_txt = setInterval((calcApp, num)=> {
+                    if(this.set_txt < this.set_Max){
+                        this.set_txt++;
+                    }else{
+                        clearInterval(mv_txt);
+                    }
+                }, 50);
             }
         }
     });

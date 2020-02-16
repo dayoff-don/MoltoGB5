@@ -76,14 +76,14 @@ $t_cl03 : #ff7800;
 .sir_cl01{color: $t_cl01;}
 .sir_bd01{border-color: $t_cl01;}
 
-body{ 
+body{
     @include respond-to(wide-screens) {}
     @include respond-to(medium-screens) {}
     @include respond-to(handhelds) {}
 }
 
 
-body,html{height:100%;}
+body,html{height:100%;overflow-y: auto;}
 
 :not(.on) .U_on_show{display: none;}
 
@@ -108,12 +108,14 @@ body,html{height:100%;}
 .gs_btn01:hover a{background: linear-gradient(to right, #427905, #5bad00);-webkit-background-clip: text;-webkit-text-fill-color: transparent}
 .gs_nav button,.gs_nav li a{display:block;width:50px;height:50px;border-radius:50%;background:$t_cl01;color:#fff}
 .gs_nav li a{padding-top:11px}
+.sg_chbox{background: #fff;}
 .sg_chbox input[type="text"]{width:calc(100% - 60px);}
 .sg_chbox{border:1px solid $t_cl01;
     @include respond-to(handhelds) {max-width:230px}
 }
 
 #J_ch_btn01.on{display:none}
+#contributions_info ul.commitBox {padding: 15px 0;background: rgba(0,0,0,0.5);}
 #contributions_info ul.commitBox li{width:9.5px;height:9.5px;background:none;margin: 5px 2px 0 0;position: relative;float:left}
 #contributions_info ul.commitBox li:nth-child(7n + 1){margin-left:90px}
 #contributions_info ul.commitBox li div{position: absolute;left: 0;top:0;color:#333;width:150px;padding:10px 20px;display:none;transition: 0.5s all;box-sizing: border-box;border:1px solid transparent}
@@ -122,7 +124,7 @@ body,html{height:100%;}
 #contributions_info ul.commitBox li .weekTitle{position: absolute;left: -60px;;}
 #contributions_info ul.commitYear li{padding:0 10px;margin-top:10px;}
 #contributions_info ul.commitYear {margin-top:10px;margin-bottom:20px}
-#contributions_info ul.commitYear li button{border:1px solid rgb(35, 154, 59);width:100%;padding:5px 0;color:rgb(35, 154, 59);border-radius: 55px;max-width: 130px;}
+#contributions_info ul.commitYear li button{border:1px solid rgb(35, 154, 59);width:100%;padding:5px 0;color:rgb(35, 154, 59);border-radius: 55px;max-width: 130px;background:rgba(255,255,255,0.9)}
 #contributions_info ul.commitYear li button.active{background:rgb(35, 154, 59);color:#fff}
 #chUser input{width:80%;border:1px solid rgb(35, 154, 59);height:60px;border-right: 0;}
 #chUser button{background: rgb(35, 154, 59);height:60px;width:20%;color:#fff}
@@ -155,3 +157,5 @@ body,html{height:100%;}
   >*:nth-child(4):after{background:rgb(19, 190, 233)}
   >*:nth-child(5):after{background:rgb(21, 8, 204);}
 }
+
+.sir_years_btn > li{background: rgba(255,255,255,0.91);}
