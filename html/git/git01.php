@@ -3,6 +3,9 @@
     include_once('../../common.php');
     include_once("../_head.php");
 ?>
+
+
+
 <div class="gs_bg01 T_wd_full T_ht_full T_ds_table" style="background-size: 110%">
     <div class="T_wd_full T_ht_full T_ds_cell T_vt_md">
         <div id="contributions_info" v-if="showContributions.length !== 0" class="U_area01 T_pd_top100 T_pd_ht20 T_ps_rl clear " style="max-width:640px;background-size:auto 100%">

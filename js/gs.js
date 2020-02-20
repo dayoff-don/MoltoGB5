@@ -34,9 +34,8 @@ function dateDiff(_date1, _date2) {
     return diff;
 }
 
-const mode = document.getElementById('app').getAttribute('data-mode')
+const mode = document.getElementById('app').getAttribute('data-mode');
 
-console.log(mode);
 if(mode == 'git01'){
     const today = new Date();
     const app = new Vue({
@@ -138,10 +137,13 @@ if(mode == 'git01'){
                 this.makeData();
             },
             record(){
-                console.log(`${g5_url}api/gitSetToday_api.php`);
+                //console.log(`${g5_url}api/gitSetToday_api.php`);
                 if(this.todayCnt > 0){
                     axios.get(`${g5_url}api/gitSetToday_api.php?commit=${this.todayCnt}`).then(res=>{
-                        if(res.data == 'ok' || res.data == 'did')this.recordTxt ="짜란다~";
+                        if(res.data == 'ok' || res.data == 'did'){
+                            this.recordTxt ="짜란다~";
+                            html2canvas(document.querySelector("#app")).then(canvas => {saveAs(canvas.toDataURL('image/png'),"capture-test.png");});
+                        }
                         if(res.data == 'ok')alert("정원사 인증이 완료되었습니다.");
                         if(res.data == 'did')alert("이미 인증 하셨네요.");
                         if(res.data == 'err')alert("에러가 났습니다.");
@@ -245,3 +247,19 @@ $(function(){
     });
 
 });
+
+function saveAs(uri, filename) {
+    // 캡쳐된 파일을 이미지 파일로 내보낸다.
+    var link = document.createElement('a');
+    if (typeof link.download === 'string') {
+        link.href = uri;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } else {
+        window.open(uri);
+    }
+}
+
+

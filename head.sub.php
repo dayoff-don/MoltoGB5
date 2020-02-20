@@ -125,6 +125,8 @@ if(!defined('G5_IS_ADMIN')){
     //add_javascript('<script src="'.G5_JS_URL.'/extend.js?ver=1.0.0"></script>', 0); //j-jmodule
     add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/jmodule.css?ver=1.0.0"> ',0);
     add_javascript('<script src="https://kit.fontawesome.com/936bb0176f.js" crossorigin="anonymous"></script>',0);
+    add_javascript('<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>',0);
+    
 }
 ?>
 
