@@ -354,6 +354,15 @@ function social_extends_get_keys($provider){
                     "redirect_uri" => get_social_callbackurl('payco'),
                     "trustForwarded" => false
                 );
+
+        //gitHub
+        // Payco
+        $r['Github'] = array(
+            "enabled" => true,
+            "keys" => array("id" => 'fad1f4720d8c241df34f', "secret" => 'c7dce37004ef63a6f55f65521d2029282b00ff64'),
+            "redirect_uri" => '/api/gitOuterLogin.php',
+            "trustForwarded" => false
+        );
     }
 
     return $r[$provider];
