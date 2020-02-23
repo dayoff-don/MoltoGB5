@@ -54,13 +54,16 @@ if(mode == 'git01'){
             showContributions : [],
             todayComit: false,
             todayCnt: 0,
-            recordTxt : '오늘인증하기'
+            recordTxt : '오늘인증하기',
+            ranker: Object,
+            rankMode : 'today',
         },
         created: function () {
             axios.get(g5_url + '/api/gitGetName_api.php').then(res=>{
                 this.userName = res.data;
                 this.makeData();
             });
+            this.rank();
         },
         methods:{
             removeData(e){
@@ -150,6 +153,16 @@ if(mode == 'git01'){
                     });
                 }
             },
+            rank(){
+                axios.get(`${g5_url}api/gitRanking_api.php?mode=${this.rankMode}`).then(res=>{
+                    this.ranker = res.data;
+                    console.log(this.ranker);
+                });
+            },
+            changeRank(mode){
+                this.rankMode = mode;
+                this.rank();
+            }
         }
     });
 }
@@ -211,6 +224,27 @@ if(mode == 'main01'){
     });
 }
 
+if(mode == 'my01'){
+    const app = new Vue({
+        mode: 'production',
+        el:'#app',
+        data:{
+            todayComit : false
+        },
+        created: function(){
+            this.getGitToday();
+        },
+        methods:{
+            getGitToday(){
+                console.log(`${g5_url}api/gitSetToday_api.php`);
+                axios.get(`${g5_url}api/gitSetToday_api.php`).then(res=>{
+                    if(res.data == 'did')this.todayComit = true;        
+                });
+            }
+        }
+        
+    });
+}
 
 $(function(){
     var windowHide = false;

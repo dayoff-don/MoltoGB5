@@ -133,7 +133,7 @@ if(!defined('G5_IS_ADMIN')){
 <!-- jsh add module end-->
 
 </head>
-<body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
+<body  <?if($Jmode =="normal" || $Jmode =="my01" || $Jmode =="git01" || $Jmode == "main01")echo 'class="gs_bg01"';?>  <?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 
 <?php
 if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.

@@ -4,7 +4,7 @@
     include_once("./_head.php");
 ?>
     <?if($is_member){?>
-    <div class="gs_bg01 T_wd_full T_ht_full">
+    <div class="T_wd_full T_ht_full">
         <div class="T_ft_ct T_ht_full U_mg_ct T_ds_table PT_wd_sz640 ">
             <div class="T_ht_full T_wd_full T_ds_cell T_vt_md" style="max-width:640px">
                 <div class="T_ht_p60">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="btm T_ht_p30 T_ps_rl" style="background: url('/img/main01.png')no-repeat center;background-size:auto 100%">
                             <div class="T_ds_table T_wd_full T_ht_full U_ft_cfff">
-                                <div class="T_ds_cell T_ht_full T_wd_full T_vt_md U_ft_cfff T_ft_rem15 T_ft_wh500" :style="{transition:'1s all',color:set_color}"><span class="T_ds_inbl T_wd_sz60 T_ht_sz60 U_bg_cfff U_bd_rd T_ft_wh_700" style="line-height:60px">{{set_txt}} <span class="T_ft_sz14">%</span></span></div>
+                                <div class="T_ds_cell T_ht_full T_wd_full T_vt_md U_ft_cfff T_ft_rem15 T_ft_wh700" :style="{transition:'1s all',color:set_color}"><span class="T_ds_inbl T_wd_sz60 T_ht_sz60 U_bg_cfff U_bd_rd T_ft_wh_700" style="line-height:60px">{{set_txt}} <span class="T_ft_sz14">%</span></span></div>
                             </div>
                         </div>
                     </div>     

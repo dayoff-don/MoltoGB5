@@ -1,13 +1,13 @@
 <?
+    if(!$Jmode)$Jmode = 'normal';
     include_once(G5_PATH."/head.sub.php");
     add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/skin/thema/gs.css?ver=1.0.0"> ',0);
-    if(!$Jmode)$Jmode = 'normal';
 ?>
 
 <div id="loading"></div>
 <div id="app" data-mode="<?=$Jmode?>" class="T_wd_full T_ht_full"> 
     <?if(!$is_member){?>
-    <div class="T_ds_table T_ht_full T_wd_full U_mg_ct gs_bg01 T_ps_rl" style="max-width:640px">
+    <div class="T_ds_table T_ht_full T_wd_full U_mg_ct T_ps_rl" style="max-width:640px">
         <div class=" T_ds_cell T_ht_p80  T_vt_md" >
             <div class=" T_ft_ct gs_login U_bd_rd T_ps_rl U_ft_cfff">
                 <div class="gs_bd01 T_wd_sz300 T_ht_sz300 U_bd_rd U_mg_ct T_ds_table U_ov_hd">
@@ -28,9 +28,9 @@
             </button>
             <ul class="T_ps_ab T_mg_Ctop10 T_ft_ct T_ft_sz25 J_toggle_con T_ds_non" style="top:100%">
                 <li><a href="<?=G5_URL?>" ><i class="fas fa-home"></i>   <span class="sound_only">home</span></a></li>
-                <li><a href="#" class="read_link"><i class="fas fa-user-circle"></i><span class="sound_only">mypage</span></a></li>
+                <li><a href="<?=G5_URL?>/html/mypage/my01.php" ><i class="fas fa-user-circle"></i><span class="sound_only">mypage</span></a></li>
                 <li><a href="<?=G5_URL?>/html/git/git01.php" ><i class="fab fa-github"></i><span class="sound_only">gitpage</span></a></li>
-                <li><a href="#" class="read_link"><i class="fas fa-users"></i><span class="sound_only"></span></a></li>
+                <li><a href="#" class="read_link"><i class="fas fa-users"></i><span class="sound_only">info</span></a></li>
                 <li><a href="#" class="read_link"><i class="fas fa-hands-helping"></i><span class="sound_only">maker info</span></a></li>
                 <li><a href="<?=G5_BBS_URL?>/logout.php"><i class="fas fa-sign-out-alt"></i><span class="sound_only">logout</span></a></li>
             </ul>
