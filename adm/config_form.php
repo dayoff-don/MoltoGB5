@@ -1125,6 +1125,14 @@ include_once('_rewrite_config_form.php');
                     <p><?php echo get_social_callbackurl('payco'); ?></p>
                     </div>
                 </div>
+                <div class="explain_box">
+                    <input type="checkbox" name="cf_social_servicelist[]" id="check_social_payco" value="payco" <?php echo option_array_checked('Github', $config['cf_social_servicelist']); ?> >
+                    <label for="check_social_payco">깃허브 로그인을 사용합니다</label>
+                    <div>
+                    <h3>페이코 CallbackURL</h3>
+                    <p><?php echo get_social_callbackurl('Github'); ?></p>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -1197,6 +1205,16 @@ include_once('_rewrite_config_form.php');
             <th scope="row"><label for="cf_payco_secret">페이코 Secret</label></th>
             <td>
                 <input type="text" name="cf_payco_secret" value="<?php echo $config['cf_payco_secret']; ?>" id="cf_payco_secret" class="frm_input" size="45">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="cf_github_clientid">깃허브 Client ID</label></th>
+            <td>
+                <input type="text" name="cf_github_clientid" value="<?php echo $config['cf_github_clientid']; ?>" id="cf_github_clientid" class="frm_input" size="40"> <a href="https://github.com/settings/developers" target="_blank" class="btn_frmline">앱 등록하기</a>
+            </td>
+            <th scope="row"><label for="cf_github_secret">깃허브 Secret</label></th>
+            <td>
+                <input type="text" name="cf_github_secret" value="<?php echo $config['cf_github_secret']; ?>" id="cf_github_secret" class="frm_input" size="45">
             </td>
         </tr>
         </tbody>

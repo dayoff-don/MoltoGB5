@@ -359,8 +359,8 @@ function social_extends_get_keys($provider){
         // Payco
         $r['Github'] = array(
             "enabled" => true,
-            "keys" => array("id" => 'fad1f4720d8c241df34f', "secret" => 'c7dce37004ef63a6f55f65521d2029282b00ff64'),
-            "redirect_uri" => '/api/gitOuterLogin.php',
+            "keys" => array("id" => $config['cf_github_clientid'], "secret" => $config['cf_github_secret']),
+            "redirect_uri" => get_social_callbackurl('github'),
             "trustForwarded" => false
         );
     }
@@ -914,6 +914,7 @@ function social_get_provider_service_name($provider='', $all=''){
         'google'    =>  '구글',
         'twitter'  =>  '트위터',
         'payco'  =>  '페이코',
+        'github'  =>  '깃허브',
         );
 
     if( $all ){
