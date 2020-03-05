@@ -20,7 +20,6 @@ function dateAddDel(sDate, nNum, type) {
     return '' + yy + '-' +  mm  + '-' + dd;
 }
 
-
 function dateDiff(_date1, _date2) {
     var diffDate_1 = _date1 instanceof Date ? _date1 :new Date(_date1);
     var diffDate_2 = _date2 instanceof Date ? _date2 :new Date(_date2);
@@ -32,6 +31,20 @@ function dateDiff(_date1, _date2) {
     diff = Math.ceil(diff / (1000 * 3600 * 24));
 
     return diff;
+}
+
+function saveAs(uri, filename) {
+    // 캡쳐된 파일을 이미지 파일로 내보낸다.
+    var link = document.createElement('a');
+    if (typeof link.download === 'string') {
+        link.href = uri;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } else {
+        window.open(uri);
+    }
 }
 
 const mode = document.getElementById('app').getAttribute('data-mode');
@@ -155,8 +168,9 @@ if(mode == 'git01'){
             },
             rank(){
                 axios.get(`${g5_url}api/gitRanking_api.php?mode=${this.rankMode}`).then(res=>{
+                    if(res.data.indexOf('<br />') == -1){
                     this.ranker = res.data;
-                    console.log(this.ranker);
+                    }
                 });
             },
             changeRank(mode){
@@ -282,18 +296,5 @@ $(function(){
 
 });
 
-function saveAs(uri, filename) {
-    // 캡쳐된 파일을 이미지 파일로 내보낸다.
-    var link = document.createElement('a');
-    if (typeof link.download === 'string') {
-        link.href = uri;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    } else {
-        window.open(uri);
-    }
-}
 
 
