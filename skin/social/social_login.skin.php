@@ -38,8 +38,13 @@ add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css
             });
         });
     </script>
-    <?php } ?>
+    <?php } 
+        if($mt_add_login01){
+    ?>
     <a href="<?php echo $self_url;?>?provider=kakao&amp;url=<?php echo $urlencode;?>" class="btn_submit" style="background:#FAE100;display:block;line-height:45px" title="카카오">카카오로 로그인</a>
+    <?} else{?>
+        <a href="<?php echo $self_url;?>?provider=kakao&amp;url=<?php echo $urlencode;?>" title="카카오">로그인</a>
+    <?}?>
 <?/*
 
 <div id="sns_login" class="login-sns sns-wrap-32 sns-wrap-over" style="border-top:0">
