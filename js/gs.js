@@ -172,7 +172,6 @@ if(mode == 'git01'){
                     this.ranker = res.data;
                     console.log(res.data);
                     }else{
-                        console.log('여기타');
                         this.ranker = [
                             {
                                 'COUNT(*)':'5',
