@@ -170,6 +170,15 @@ if(mode == 'git01'){
                 axios.get(`${g5_url}api/gitRanking_api.php?mode=${this.rankMode}`).then(res=>{
                     if(res.data.indexOf('<br />') == -1){
                     this.ranker = res.data;
+                    console.log(res.data);
+                    }else{
+                        console.log('여기타');
+                        this.ranker = [
+                            {
+                                'COUNT(*)':'5',
+                                'git_id':'오늘은 인증자가 없습니다.',
+                            }
+                        ];
                     }
                 });
             },

@@ -24,7 +24,7 @@
             <div class="T_mg_btm30 U_bg_cfff U_ov_at T_ht_sz50 U_ft_c000" style="border-radius:5px">
                <ul class="T_ht_full">
                     <li v-for="(data, index) in ranker" :key="index" class="T_pd_ht15 T_lh_px20 T_ht_full T_pd_Pwd10 clear">
-                        <span>{{index+1}}</span>.
+                        <span v-if='data.git_id !== "오늘은 인증자가 없습니다."'>{{index+1}}.</span>
                         <span>{{data.git_id}}</span>
                         <span class="T_fl_rt">{{data.git_cnt}}</span>
                     </li>
