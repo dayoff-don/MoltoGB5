@@ -10,8 +10,15 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     <div class="mbskin_box">
         <h1><?php echo $g5['title'] ?></h1>
         <div class="mb_log_cate">
+<<<<<<< HEAD
             <h2><span class="sound_only">회원</span>로그인</h2>
             <a href="<?php echo G5_BBS_URL ?>/register.php" class="join">회원가입</a>
+=======
+            <h2 style="width:100%;border-bottom:1px solid #dde7e9"><span class="sound_only">회원</span>로그인</h2>
+            <?/*
+            <a href="<?php echo G5_BBS_URL ?>/register.php" class="join">회원가입</a>]
+            */?>
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
         </div>
         <form name="flogin" action="<?php echo $login_action_url ?>" onsubmit="return flogin_submit(this);" method="post">
         <input type="hidden" name="url" value="<?php echo $login_url ?>">
@@ -23,7 +30,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             <label for="login_pw" class="sound_only">비밀번호<strong class="sound_only"> 필수</strong></label>
             <input type="password" name="mb_password" id="login_pw" required class="frm_input required" size="20" maxLength="20" placeholder="비밀번호">
             <button type="submit" class="btn_submit">로그인</button>
+<<<<<<< HEAD
             
+=======
+            <?$mt_add_login01 = true;?>
+            <?php @include_once(get_social_skin_path().'/social_login.skin.php'); // 소셜로그인 사용시 소셜로그인 버튼 ?>
+            <?/*
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
             <div id="login_info">
                 <div class="login_if_auto chk_box">
                     <input type="checkbox" name="auto_login" id="login_auto_login" class="selec_chk">
@@ -33,9 +46,17 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
                     <a href="<?php echo G5_BBS_URL ?>/password_lost.php" target="_blank" id="login_password_lost">정보찾기</a>  
                 </div>
             </div>
+<<<<<<< HEAD
         </fieldset> 
         </form>
         <?php @include_once(get_social_skin_path().'/social_login.skin.php'); // 소셜로그인 사용시 소셜로그인 버튼 ?>
+=======
+            */?>
+            
+        </fieldset> 
+        </form>
+     
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
     </div>
 
     <?php // 쇼핑몰 사용시 여기부터 ?>

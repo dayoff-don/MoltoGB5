@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .. phpMyAdmin documentation master file, created by
    sphinx-quickstart on Wed Sep 26 14:04:48 2012.
    You can adapt this file completely to your liking, but it should at least
@@ -30,3 +31,37 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`search`
 * :ref:`glossary`
+=======
+.. phpMyAdmin documentation master file, created by
+   sphinx-quickstart on Wed Sep 26 14:04:48 2012.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to phpMyAdmin's documentation!
+======================================
+
+Contents:
+
+.. toctree::
+    :maxdepth: 2
+
+    intro
+    require
+    setup
+    config
+    user
+    faq
+    developers
+    vendors
+    copyright
+    credits
+    glossary
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
+* :ref:`glossary`
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
@@ -26,3 +27,33 @@ require 'libraries/display_import.lib.php';
 
 ?>
 
+=======
+<?php
+/* vim: set expandtab sw=4 ts=4 sts=4: */
+/**
+ *
+ * @package PhpMyAdmin
+ */
+
+/**
+ *
+ */
+require_once 'libraries/common.inc.php';
+
+$response = PMA_Response::getInstance();
+$header   = $response->getHeader();
+$scripts  = $header->getScripts();
+$scripts->addFile('import.js');
+
+/**
+ * Gets tables informations and displays top links
+ */
+require 'libraries/db_common.inc.php';
+require 'libraries/db_info.inc.php';
+
+$import_type = 'database';
+require 'libraries/display_import.lib.php';
+
+?>
+
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9

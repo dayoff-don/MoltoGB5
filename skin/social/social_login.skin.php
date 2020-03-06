@@ -19,7 +19,10 @@ add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css
     <?php if( G5_SOCIAL_USE_POPUP && !$social_pop_once ){
         $social_pop_once = true;
     ?>
+<<<<<<< HEAD
     <?/*
+=======
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
     <script>
         jQuery(function($){
             $(".sns-wrap").on("click", "a.social_link", function(e){
@@ -39,9 +42,19 @@ add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css
             });
         });
     </script>
+<<<<<<< HEAD
     */?>
     <?php } ?>
     <a href="<?php echo $self_url;?>?provider=kakao&amp;url=<?php echo $urlencode;?>" class="sns-icon social_link sns-kakao" title="카카오">로그인</a>
+=======
+    <?php } 
+        if($mt_add_login01){
+    ?>
+    <a href="<?php echo $self_url;?>?provider=kakao&amp;url=<?php echo $urlencode;?>" class="btn_submit" style="background:#FAE100;display:block;line-height:45px" title="카카오">카카오로 로그인</a>
+    <?} else{?>
+        <a href="<?php echo $self_url;?>?provider=kakao&amp;url=<?php echo $urlencode;?>" title="카카오">로그인</a>
+    <?}?>
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
 <?/*
 
 <div id="sns_login" class="login-sns sns-wrap-32 sns-wrap-over" style="border-top:0">

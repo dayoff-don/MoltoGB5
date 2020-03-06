@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .olLayerGoogleCopyright {
     right: 3px;
     bottom: 2px;
@@ -8,3 +9,15 @@
     bottom: 2px;   
 }
 
+=======
+.olLayerGoogleCopyright {
+    right: 3px;
+    bottom: 2px;
+    left: auto;  
+}
+.olLayerGooglePoweredBy {
+    left: 2px;
+    bottom: 2px;   
+}
+
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9

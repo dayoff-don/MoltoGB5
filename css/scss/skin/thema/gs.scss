@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*sass 변수 모음*/
 //$j_device : ('.T_','.TAB_','.M_','.TM_','.PC_','.PM_','.PT_'); 
 $S_M: 640px; 
@@ -158,4 +159,166 @@ body,html{height:100%;overflow-y: auto;background: #000;}
   >*:nth-child(5):after{background:rgb(21, 8, 204);}
 }
 
+=======
+/*sass 변수 모음*/
+//$j_device : ('.T_','.TAB_','.M_','.TM_','.PC_','.PM_','.PT_'); 
+$S_M: 640px; 
+$S_T: 1024px;
+$S_W: 1200;
+/*mixin and function 모음*/
+@mixin clear {content:'';clear:both;display:block}
+@mixin area {margin-left:auto;margin-right:auto}
+@mixin ps_center($size) {left:0;margin-left:auto;margin-right:auto;right:0;width: $size;}
+@mixin bg_base01($url) {background:url($url)no-repeat center}
+@mixin bg_ch_url($url){background-image: url($url);}
+@mixin r_img($mode,$max){
+	$mode: '가로'!default;
+	$max: 100% !default;
+	@if($mode='가로'){width:100%;max-width: $max;}
+	@if($mode='세로'){height:100%;max-height:$max;}
+}
+
+
+/*SCSS*/
+ 
+$breakpoints: (
+        'small': (max-width: 640px),
+        'medium': (max-width: 1024px),
+        'large': (max-width: 1200px),
+) !default;
+
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+} 
+
+@mixin respond-to($media) {
+  @if $media == handhelds2 {
+    @media only screen and (max-width: $S_T) { @content; }
+  }
+  @if $media == handhelds {
+    @media only screen and (max-width: $S_M) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $S_M + 1) and (max-width: $S_T - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $S_T) { @content; }
+  }
+}
+
+
+@keyframes mymove {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+
+@keyframes AnimationName { 
+    0%{background-position:0% 50%} 
+    50%{background-position:100% 50%} 
+    100%{background-position:0% 50%} 
+}
+
+$t_cl01 : rgba(35, 154, 59,1);
+$t_cl02 : #f7931d; 
+$t_cl03 : #ff7800;
+
+.sir_bg01{background: $t_cl01;}
+.sir_cl01{color: $t_cl01;}
+.sir_bd01{border-color: $t_cl01;}
+
+body{
+    @include respond-to(wide-screens) {}
+    @include respond-to(medium-screens) {}
+    @include respond-to(handhelds) {}
+}
+
+
+body,html{height:100%;overflow-y: auto;background: #000;}
+
+:not(.on) .U_on_show{display: none;}
+
+.on {
+    .U_off_show{display: none}
+    .U_on_show{display: block;}
+}
+
+.J_hide01:after{position: absolute;content:"";width:100%;height:100%;top:0;left:0;background: rgba(0,0,0,0.3);}
+.J_hide01{overflow:hidden}
+
+#loading{width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,1);transition:1s all;position:absolute;z-index:999;opacity:1}
+#loading.on{opacity:0}
+#loading.on2{opacity:0;z-index: -999}
+
+.gs_bg01{background:url("/img/gs_bg01.jpg")no-repeat center;width:100%;background-size: 100%}
+.gs_bg01:before{width:100%;height:100%;display:block;content:"";top:0;left:0;background:linear-gradient(137deg, #440808, #8e2881, #122496, #072712);position:absolute;display: flex; flex-direction: column; align-items: center; justify-content: center;animation: AnimationName 15s ease infinite;opacity:0.4}
+.gs_bd01{border:5px solid #fff}
+.gs_btn01:before{content:"";width:100%;height:100%;display:block;position:absolute;background:rgba(255,255,255,1);top:0;left:0;transform:scale(0);transition:0.3s all;border-radius:50%}
+.gs_btn01:hover:before{transform:scale(0.9)}
+.gs_btn01 a{position:relative}
+.gs_btn01:hover a{background: linear-gradient(to right, #427905, #5bad00);-webkit-background-clip: text;-webkit-text-fill-color: transparent}
+.gs_nav button,.gs_nav li a{display:block;width:50px;height:50px;border-radius:50%;background:$t_cl01;color:#fff}
+.gs_nav li a{padding-top:11px}
+.sg_chbox{background: #fff;}
+.sg_chbox input[type="text"]{width:calc(100% - 60px);}
+.sg_chbox{border:1px solid $t_cl01;
+    @include respond-to(handhelds) {max-width:230px}
+}
+
+#J_ch_btn01.on{display:none}
+#contributions_info ul.commitBox {padding: 15px 0;background: rgba(0,0,0,0.5);}
+#contributions_info ul.commitBox li{width:9.5px;height:9.5px;background:none;margin: 5px 2px 0 0;position: relative;float:left}
+#contributions_info ul.commitBox li:nth-child(7n + 1){margin-left:90px}
+#contributions_info ul.commitBox li div{position: absolute;left: 0;top:0;color:#333;width:150px;padding:10px 20px;display:none;transition: 0.5s all;box-sizing: border-box;border:1px solid transparent}
+#contributions_info ul.commitBox li:hover div{display: block;z-index: 90;background: rgba(255,255,255,0.7);}
+#contributions_info ul.commitBox li:hover{border:1px solid $t_cl01}
+#contributions_info ul.commitBox li .weekTitle{position: absolute;left: -60px;;}
+#contributions_info ul.commitYear li{padding:0 10px;margin-top:10px;}
+#contributions_info ul.commitYear {margin-top:10px;margin-bottom:20px}
+#contributions_info ul.commitYear li button{border:1px solid rgb(35, 154, 59);width:100%;padding:5px 0;color:rgb(35, 154, 59);border-radius: 55px;max-width: 130px;background:rgba(255,255,255,0.9)}
+#contributions_info ul.commitYear li button.active{background:rgb(35, 154, 59);color:#fff}
+#chUser input{width:80%;border:1px solid rgb(35, 154, 59);height:60px;border-right: 0;}
+#chUser button{background: rgb(35, 154, 59);height:60px;width:20%;color:#fff}
+.userInfo{margin-bottom:20px}
+.userInfo div{margin: 2px 0;padding:5px 0}
+.userInfo div:after{content:"";clear:both;display: block;}
+
+#contributions_info ul.commitBox li:nth-child(21n + 1){clear: both;}
+@media only screen and (max-width: 580px) {
+    #contributions_info ul.commitBox li:nth-child(7n + 1){margin-left:60px}
+    #contributions_info ul.commitBox li .weekTitle{position: absolute;left: -50px;}
+    
+}
+@media only screen and (max-width: 480px) {
+        #contributions_info ul.commitBox li:nth-child(7n + 1){margin-left:20%}/*
+        #contributions_info ul.commitBox li .weekTitle{position: absolute;left: -50px;}*/
+     #contributions_info ul.commitBox li:nth-child(14n + 1){clear: both;}
+     #contributions_info ul.commitBox li:nth-child(21n + 1){clear: none;}
+     #chUser input, #chUser button{height:50px}
+}
+
+.sir_icon01s{
+  >*{height:15px;line-height:25px;padding-left:20px;position:relative}
+  >*:after{content:"";display:block;position:absolute;left:0;top:7.5px;height:10px;width:15px;background: #333;}
+  >*{margin-top: calc(100% -  125px / 4)}
+  >*:first-child{margin-top:0}
+  >*:nth-child(1):after{background:#c50808}
+  >*:nth-child(2):after{background:rgb(230, 115, 21)}
+  >*:nth-child(3):after{background:rgb(250, 188, 16)}
+  >*:nth-child(4):after{background:rgb(19, 190, 233)}
+  >*:nth-child(5):after{background:rgb(21, 8, 204);}
+}
+
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
 .sir_years_btn > li{background: rgba(255,255,255,0.91);}

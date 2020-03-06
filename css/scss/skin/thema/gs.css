@@ -336,7 +336,11 @@ body, html {
   #contributions_info ul.commitBox li:nth-child(7n + 1) {
     margin-left: 20%;
   }
+<<<<<<< HEAD
   /*
+=======
+  /*
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
         #contributions_info ul.commitBox li .weekTitle{position: absolute;left: -50px;}*/
   #contributions_info ul.commitBox li:nth-child(14n + 1) {
     clear: both;

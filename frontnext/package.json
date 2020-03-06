@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "frontnext",
   "version": "1.0.0",
@@ -18,3 +19,25 @@
     "fork-ts-checker-webpack-plugin": "4.0.2"
   }
 }
+=======
+{
+  "name": "frontnext",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "0.19.2",
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "@babel/preset-stage-0": "7.8.3",
+    "fork-ts-checker-webpack-plugin": "4.0.2"
+  }
+}
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9

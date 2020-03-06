@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const Counter = React.memo(({ number, onIncrease, onDecrease }) => {
@@ -13,3 +14,20 @@ const Counter = React.memo(({ number, onIncrease, onDecrease }) => {
 });
 
 export default Counter;
+=======
+import React from 'react';
+
+const Counter = React.memo(({ number, onIncrease, onDecrease }) => {
+  return (
+    <div>
+      <h1>{number}</h1>
+      <div>
+        <button onClick={onIncrease}>+1</button>
+        <button onClick={onDecrease}>-1</button>
+      </div>
+    </div>
+  );
+});
+
+export default Counter;
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9

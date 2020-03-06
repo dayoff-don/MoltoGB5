@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # frontnuxt
 
 > web jsh,colley,dogfood maker
@@ -20,3 +21,27 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+=======
+# frontnuxt
+
+> web jsh,colley,dogfood maker
+
+## Build Setup
+
+``` bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+>>>>>>> 78f73c664159341f41233d9d1aff2c31be21e3a9
