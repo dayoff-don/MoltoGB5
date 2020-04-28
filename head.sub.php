@@ -105,10 +105,16 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
+<meta property="og:title" content="잔디정원사" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="<?=G5_IMG_URL?>/favicon_196.png" />
+<meta property="og:url" content="http://grassgardener.kr/" />
+<meta property="og:description" content="매일 깃허브 1일 1커밋 하는 프로그래머가 되어 봅시다." />
+<meta property="og:site_name" content="잔디정원사" />
 
 <link rel="icon" type="image/png" sizes="32x32" href="<?=G5_IMG_URL?>/favicon_32.png" />
 <link rel="icon" type="image/png" sizes="196x196" href="<?=G5_IMG_URL?>/favicon_196.png" />
-
+<meta name="google" content="nositelinkssearchbox" />
 <!-- jsh add module start -->
 
 <?php
