@@ -52,8 +52,8 @@
         }
 
         //make Json 
-        $mt_output = my_json_encode($list);
-        echo  urldecode($mt_output);
+        $mt_output = json_encode($list);
+        echo urldecode($mt_output);
     }else{
         die;
     }

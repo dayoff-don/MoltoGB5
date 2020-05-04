@@ -123,7 +123,8 @@ if(!defined('G5_IS_ADMIN')){
 	//add_javascript('<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>',0);
 	//add_javascript('<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>',0);
 	//add_javascript('<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>',0);
-	/*vue And Babel JS ES6*/
+    /*vue And Babel JS ES6*/
+    add_javascript('<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>',0);
 	add_javascript('<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>', 0);
 	add_javascript('<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>', 0); //개발모드
     //add_javascript('<script src="https://cdn.jsdelivr.net/npm/vue"></script>', 0); //유통모드
@@ -132,7 +133,6 @@ if(!defined('G5_IS_ADMIN')){
     add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/jmodule.css?ver=1.0.0"> ',0);
     add_javascript('<script src="https://kit.fontawesome.com/936bb0176f.js" crossorigin="anonymous"></script>',0);
     add_javascript('<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>',0);
-    
 }
 ?>
 

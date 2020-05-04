@@ -155,6 +155,7 @@ if(mode == 'git01'){
             rank(){
                 axios.get(`${g5_url}api/gitRanking_api.php?mode=${this.rankMode}`).then(res=>{
                     this.ranker = res.data;
+                    console.log('this.ranker');
                     console.log(this.ranker);
                 });
             },

@@ -43,7 +43,7 @@ function check_total($wr_id){
     return $sql_query['cnt'];
 }
  
-echo $_SERVER["REMOTE_ADDR"];
+//echo $_SERVER["REMOTE_ADDR"];
 ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
