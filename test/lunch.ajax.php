@@ -47,7 +47,7 @@ if($_GET['action'] == "choice"){
 }
 
 //make json 
-$json = my_json_encode($arr);
+$json = json_encode($arr);
 echo $json;
 
 ?>

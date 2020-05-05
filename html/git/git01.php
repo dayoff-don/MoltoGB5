@@ -28,7 +28,8 @@
                         <span>{{data.git_id}}</span>
                         <span class="T_fl_rt">{{data.git_cnt}}</span>
                     </li>
-               </ul> 
+                    <li v-if="noData" class="T_pd_ht15 T_lh_px20 T_ht_full T_pd_Pwd10 clear">자료가 없습니다.</li>
+                </ul> 
             </div>
             
             <div class="userInfo T_ft_rem12 U_ft_c333 PC_pd_wd40 T_ps_rl">
@@ -60,7 +61,7 @@
                             <div class="T_ds_cell T_wd_full T_ht_full T_vt_md ">
                             <strong class="T_ds_block T_mg_btm10 T_ft_wh500 T_ft_rem11 U_ft_c000">금일인증</strong>    
                             <span class="T_ds_block  T_ft_rem9hf U_ft_c777" :style="todayComit ? 'color:#239a3b' : 'color:#f10000'">{{todayComit ? "인증함" : "인증안함"}}</span>
-                            <button @click="record" v-if="todayComit" class="U_bg_cfff T_ps_ab  T_wd_full T_lh_16 U_bd_all01 U_bd_rd sir_bd01 T_ft_rem10 U_mg_ct" style="left:0;right:0;bottom:-10px">{{recordTxt}}</button>
+                            <button @click="record" v-if="todayComit && setName == userName" class="U_bg_cfff T_ps_ab  T_wd_full T_lh_16 U_bd_all01 U_bd_rd sir_bd01 T_ft_rem10 U_mg_ct" style="left:0;right:0;bottom:-10px">{{recordTxt}}</button>
                             </div>
                         </div>
                     </li>

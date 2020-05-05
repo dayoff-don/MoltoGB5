@@ -56,6 +56,8 @@ if(mode == 'git01'){
             recordTxt : '오늘인증하기',
             ranker: Object,
             rankMode : 'today',
+            noData : false,
+            gitId : g5_git_id
         },
         created: function () {
             axios.get(g5_url + '/api/gitGetName_api.php').then(res=>{
@@ -155,8 +157,9 @@ if(mode == 'git01'){
             rank(){
                 axios.get(`${g5_url}api/gitRanking_api.php?mode=${this.rankMode}`).then(res=>{
                     this.ranker = res.data;
-                    console.log('this.ranker');
-                    console.log(this.ranker);
+                    //console.log(res.data);
+                    if(res.data == null) this.noData = true;
+                    else this.noData = false;
                 });
             },
             changeRank(mode){
@@ -211,7 +214,7 @@ if(mode == 'main01'){
             },
             get_text(calcApp){
                 let num = 0;
-                console.log(calcApp);
+                //console.log(calcApp);
                 const mv_txt = setInterval((calcApp, num)=> {
                     if(this.set_txt < this.set_Max){
                         this.set_txt++;
@@ -236,7 +239,7 @@ if(mode == 'my01'){
         },
         methods:{
             getGitToday(){
-                console.log(`${g5_url}api/gitSetToday_api.php`);
+                //console.log(`${g5_url}api/gitSetToday_api.php`);
                 axios.get(`${g5_url}api/gitSetToday_api.php`).then(res=>{
                     if(res.data == 'did')this.todayComit = true;        
                 });

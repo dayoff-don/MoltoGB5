@@ -122,7 +122,7 @@ body,html{font-size:1em;margin:0;padding:0}
                 ?>
                 <tr>
                     <td class="U_td01"><?=$list[$i]['ca_name']?></td>
-                    <td class="U_td02" title="위치위치" target="_blank"><a href="<?=$list[$i]['wr_link1']?>"><?=$list[$i]['wr_1']?></a></td>
+                    <td class="U_td02" title="위치위치" target="_blank"><a href="<?=$list[$i]['wr_link1']?>" target="_blank"><?=$list[$i]['wr_1']?></a></td>
                     <td class="U_td03"><?=$list[$i]['wr_subject']?></td>
                     <td class="U_td04"><?=$list[$i]['wr_2'] ? 'o':'x' ?></td>
                     <td class="U_td05"><?=$list[$i]['wr_3'] ? 'o':'x'?></td>
