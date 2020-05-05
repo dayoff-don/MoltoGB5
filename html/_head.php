@@ -1,7 +1,9 @@
 <?
     if(!$Jmode)$Jmode = 'normal';
+
     include_once(G5_PATH."/head.sub.php");
-    add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/skin/thema/gs.css?ver=1.0.0"> ',0);
+    
+    add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/scss/skin/thema/gs.css?ver=1.0.7"> ',0);
 ?>
 
 <div id="loading"></div>
@@ -31,7 +33,7 @@
                 <li><a href="<?=G5_URL?>/html/mypage/my01.php" ><i class="fas fa-user-circle"></i><span class="sound_only">mypage</span></a></li>
                 <li><a href="<?=G5_URL?>/html/git/git01.php" ><i class="fab fa-github"></i><span class="sound_only">gitpage</span></a></li>
                 <li><a href="#" class="read_link"><i class="fas fa-users"></i><span class="sound_only">info</span></a></li>
-                <li><a href="#" class="read_link"><i class="fas fa-hands-helping"></i><span class="sound_only">maker info</span></a></li>
+                <li><a href="<?=G5_URL?>/html/help/help.php" ><i class="fas fa-hands-helping"></i><span class="sound_only">maker info</span></a></li>
                 <li><a href="<?=G5_BBS_URL?>/logout.php"><i class="fas fa-sign-out-alt"></i><span class="sound_only">logout</span></a></li>
             </ul>
         </div>
