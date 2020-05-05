@@ -53,10 +53,12 @@ body,html{font-size:1em;margin:0;padding:0}
 @media screen and (max-width : 640px){
     body,html{font-size:0.7em}
 }
+
+#J_RD {height:40px;width:40px;border:0;border:0;border-radius:50%;font-size:10px;vertical-align:top;}
 .U_wrap{display:table;width:100%;height:100%}
 .U_cell{display:table-cell;vertical-align:middle;width:100%}
 .U_table{width:90%;max-width:1000px;border-collapse: collapse;max-height:80%;overflow:auto;margin:0 auto}
-.U_table caption{font-size:1.4rem;font-weight:700;padding:10px}
+.U_table caption{font-size:1.4rem;font-weight:700;padding:10px;line-height:40px}
 .U_table th {font-size:1rem;text-align:center;padding:10px 0;border-bottom:5px solid #d9d9d9}
 .U_table td {font-size:0.8rem;padding:15px 8px;text-align:center;border-bottom:1px dashed #d9d9d9}
 .U_td01{width:10%;max-width:80px}
@@ -70,6 +72,22 @@ body,html{font-size:1em;margin:0;padding:0}
 
 <script>
     $(function(){
+        
+        var arr = new Array();
+        var set_rd_rg = 0;
+        $('#J_items > tr').each(function(){
+            var get_txt = $(this).find('.U_td03').text();
+            arr.push(get_txt);
+        });
+
+        $('#J_RD').on('click',function(){
+            var choiseNum = Math.floor(Math.random()*(arr.length-1));
+            if(confirm(arr[choiseNum]+'은 어떠세요?\n확인을 누르면 투표가 됩니다!')){
+                $('#J_items > tr').eq(choiseNum).find('.choice').trigger('click');
+            };
+        });
+
+ 
         $('.choice').on('click',function(){
             var this_tag = $(this);
             var id = $(this).data('id');
@@ -81,7 +99,7 @@ body,html{font-size:1em;margin:0;padding:0}
             dataType: "json" // 서버에서 보내줄 데이터의 타입 }) // HTTP 요청이 성공하면 요청한 데이터가 done() 메소드로 전달됨. 
             }).done(function(json) {console.log(json) 
                 if(json.result == "add"){
-                    alert('추가가 되었습니다.')
+                    alert('투표를 해주셨어요!')
                     this_tag.siblings('span').text(json.cnt);
                     this_tag.parent().siblings('.U_td07').find('span').text(json.cnt_total);
                     this_tag.remove();
@@ -93,7 +111,6 @@ body,html{font-size:1em;margin:0;padding:0}
             .fail(function(xhr, status, errorThrown) {console.log('에러') }) 
             //.append("상태: " + status); 
             // .always(function(xhr, status) { $("#text").html("요청이 완료되었습니다!"); });
-
         });
     });
 
@@ -102,7 +119,7 @@ body,html{font-size:1em;margin:0;padding:0}
 <div class="U_wrap">
     <div class="U_cell">
         <table class="U_table">
-            <caption>오늘뭐먹을까요?</caption>
+            <caption>오늘뭐먹을까요? <button id="J_RD">램덤<br>선택</button></caption>
             <head>
                 <tr>
                     <th>분류</th>
@@ -114,7 +131,7 @@ body,html{font-size:1em;margin:0;padding:0}
                     <th>누적투표</th>
                 </tr>
             </head>
-            <tbody>
+            <tbody id="J_items">
                 <?for($i=0; $i < count($list); $i++){
                     $today_num = check_today($list[$i]['wr_id']);
                     $total_num = check_total($list[$i]['wr_id']);

@@ -61,7 +61,7 @@ if(mode == 'git01'){
         },
         created: function () {
             axios.get(g5_url + '/api/gitGetName_api.php').then(res=>{
-                this.userName = res.data;
+                this.userName = res.data.replace(/(\s*)/g, "");
                 this.makeData();
             });
             this.rank();
@@ -94,8 +94,8 @@ if(mode == 'git01'){
                     this.showContributions =[];
                     this.todayComit = false;
                 }
-
-                axios.get(`https://github-contributions-api.now.sh/v1/${this.userName}`).then(res=>{
+                const git_url = `https://github-contributions-api.now.sh/v1/${this.userName}`; 
+                axios.get(git_url).then(res=>{
                     if(res.data.contributions.length == 0){
                         alert("유저정보가 없습니다.");
                     }else{
@@ -146,11 +146,13 @@ if(mode == 'git01'){
                     axios.get(`${g5_url}api/gitSetToday_api.php?commit=${this.todayCnt}`).then(res=>{
                         if(res.data == 'ok' || res.data == 'did'){
                             this.recordTxt ="짜란다~";
-                            html2canvas(document.querySelector("#app")).then(canvas => {saveAs(canvas.toDataURL('image/png'),"capture-test.png");});
                         }
                         if(res.data == 'ok')alert("정원사 인증이 완료되었습니다.");
                         if(res.data == 'did')alert("이미 인증 하셨네요.");
                         if(res.data == 'err')alert("에러가 났습니다.");
+                        if(confirm('이미지를 다운로드 받으시겠습니까?')){
+                            html2canvas(document.querySelector("#app")).then(canvas => {saveAs(canvas.toDataURL('image/png'),"capture-test.png");});
+                        }
                     });
                 }
             },

@@ -5,5 +5,4 @@ if($is_member){
 }else{
     die;
 }
-
 ?>
