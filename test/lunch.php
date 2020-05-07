@@ -102,9 +102,11 @@ body,html{font-size:1em;margin:0;padding:0}
                     alert('투표를 해주셨어요!')
                     this_tag.siblings('span').text(json.cnt);
                     this_tag.parent().siblings('.U_td07').find('span').text(json.cnt_total);
-                    this_tag.remove();
-                }else if(json.result == "already"){
-                    alert('이미추가했습니다.')
+                    this_tag.text('취소하기');
+                }else if(json.result == "remove"){
+                    this_tag.siblings('span').text(json.cnt);
+                    this_tag.parent().siblings('.U_td07').find('span').text(json.cnt_total);
+                    this_tag.text('투표하기');
                 }
             }) 
             // HTTP 요청이 실패하면 오류와 상태에 관한 정보가 fail() 메소드로 전달됨. 
@@ -143,7 +145,7 @@ body,html{font-size:1em;margin:0;padding:0}
                     <td class="U_td03"><?=$list[$i]['wr_subject']?></td>
                     <td class="U_td04"><?=$list[$i]['wr_2'] ? 'o':'x' ?></td>
                     <td class="U_td05"><?=$list[$i]['wr_3'] ? 'o':'x'?></td>
-                    <td class="U_td06"><span><?=$today_num?></span> <?= $my_checked > 0 ? '' : '<button class="choice" data-id="'.$list[$i]['wr_id'].'">투표하기</button></td>'?>
+                    <td class="U_td06"><span><?=$today_num?></span> <button class="choice" data-id="<?=$list[$i]['wr_id']?>"><?= $my_checked > 0 ? '취소하기' : '투표하기' ?></button></td>
                     <td class="U_td07"><span><?=$total_num?></span></td>
                 </tr>
                 <?}?>

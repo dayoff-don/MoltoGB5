@@ -1,4 +1,5 @@
 <?php
+    $og_description = "잔디정원사의 메인 페이지입니다. 오늘 몇명의 정원사들이 인증했을까요? 주기적으로 진행되는 이벤트도 확인해보세요!";
     include_once("./_common.php");
     if($is_member)$Jmode = 'main01';
     include_once("./_head.php");

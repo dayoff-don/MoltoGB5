@@ -110,7 +110,7 @@ if(!defined('G5_IS_ADMIN'))
 <meta property="og:type" content="website" />
 <meta property="og:image" content="<?=G5_IMG_URL?>/favicon_196.png" />
 <meta property="og:url" content="http://grassgardener.kr/" />
-<meta property="og:description" content="매일 깃허브 1일 1커밋 하는 프로그래머가 되어 봅시다." />
+<meta property="og:description" content="<?=$og_description ? $og_description : '매일 깃허브 1일 1커밋 하는 프로그래머가 되어 봅시다. 현재는 회원가입후 서비스를 제공하고있습니다.'?>" />
 <meta property="og:site_name" content="잔디정원사" />
 
 <link rel="icon" type="image/png" sizes="32x32" href="<?=G5_IMG_URL?>/favicon_32.png" />

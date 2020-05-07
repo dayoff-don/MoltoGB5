@@ -20,30 +20,27 @@ if($_GET['action'] == "choice"){
 
     if($sql_query['cnt'] > 0){
         //이미 있음
-        $arr['result'] = "already";
-        $sql = "select COUNT(*) as cnt from ".$g5['lunch_table']." where wr_id = '".$arr['wr_id']."' AND reg_date = '".$today."'";
+        $arr['result'] = "remove";
+        $sql = "DELETE FROM `add_lunch` WHERE  wr_id = '".$arr['wr_id']."' AND reg_date = '".$today."'";
         $sql_query = sql_fetch($sql);
-        $arr['cnt'] = $sql_query['cnt'];
     }else{
         //없으니 추가
         $sql = " INSERT INTO ".$g5['lunch_table']." 
             SET wr_id = '$wr_id',
                 ip = '$ip',
                 reg_date = '$today' ";
-
         $sql_query = sql_fetch($sql);
         //$arr['sql2'] = $sql;
-        $arr['result'] = "add";
-
-        $sql = "select COUNT(*) as cnt from ".$g5['lunch_table']." where wr_id = '".$arr['wr_id']."' AND reg_date = '".$today."'";
-        $sql_query = sql_fetch($sql);
-        $arr['cnt'] = $sql_query['cnt'];
-
-        $sql = "select COUNT(*) as cnt from ".$g5['lunch_table']." where wr_id = '".$arr['wr_id']."' AND reg_date = '".$today."'";
-        $sql_query = sql_fetch($sql);
-        $arr['cnt_total'] = $sql_query['cnt'];
-        
+        $arr['result'] = "add";        
     }
+
+    $sql = "select COUNT(*) as cnt from ".$g5['lunch_table']." where wr_id = '".$arr['wr_id']."' AND reg_date = '".$today."'";
+    $sql_query = sql_fetch($sql);
+    $arr['cnt'] = $sql_query['cnt'];
+
+    $sql = "select COUNT(*) as cnt from ".$g5['lunch_table']." where wr_id = '".$arr['wr_id']."' ";
+    $sql_query = sql_fetch($sql);
+    $arr['cnt_total'] = $sql_query['cnt'];
 }
 
 //make json 
