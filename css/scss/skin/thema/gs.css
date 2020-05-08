@@ -405,3 +405,6 @@ body, html {
 .U_bn02 svg{height:auto;width: auto;max-width:100px;display:inline-block;vertical-align: middle}
 .U_bn02 strong{display:inline-block;padding-left:5%;font-size: 1.5rem;vertical-align: middle;color: #fff;-webkit-text-stroke: 1px #000;}
 .U_bn02 span{font-size:0.9rem;font-weight: 300;-webkit-text-stroke: 0px #fff;color:#000}
+
+#contributions_info .U_info01 > ul > li {max-height:150px}
+#contributions_info .U_info01:hover{height:150px}
