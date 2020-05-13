@@ -106,7 +106,7 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
-<meta property="og:title" content="잔디정원사" />
+<meta property="og:title" content="잔디정원사 인증기" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="<?=G5_IMG_URL?>/favicon_196.png" />
 <meta property="og:url" content="http://grassgardener.kr/" />
