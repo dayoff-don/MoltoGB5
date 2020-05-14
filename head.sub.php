@@ -106,10 +106,10 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
-<meta property="og:title" content="잔디정원사 인증기" />
+<meta property="og:title" content="잔디정원사" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="<?=G5_IMG_URL?>/favicon_196.png" />
-<meta property="og:url" content="http://grassgardener.kr/" />
+<meta property="og:url" content="<?= $og_url ? $og_url : 'http://grassgardener.kr/'?>" />
 <meta property="og:description" content="<?=$og_description ? $og_description : '매일 깃허브 1일 1커밋 하는 프로그래머가 되어 봅시다. 현재는 회원가입후 서비스를 제공하고있습니다.'?>" />
 <meta property="og:site_name" content="잔디정원사" />
 
@@ -119,7 +119,7 @@ if(!defined('G5_IS_ADMIN'))
 <!-- jsh add module start -->
 
 <?php
-if(!defined('G5_IS_ADMIN')){
+if(!defined('G5_IS_ADMIN')){ 
 	/* react And Babel JS ES6 */
 	//add_javascript('<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>',0);
 	//add_javascript('<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>',0);
@@ -135,6 +135,7 @@ if(!defined('G5_IS_ADMIN')){
     add_javascript('<script src="https://kit.fontawesome.com/936bb0176f.js" crossorigin="anonymous"></script>',0);
     add_javascript('<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>',0);
 }
+
 ?>
 
 <!-- jsh add module end-->
