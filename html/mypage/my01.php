@@ -14,7 +14,10 @@
                     <div class="T_ds_table T_wd_full T_ht_full ">
                             <div class="T_ds_cell T_wd_full T_ht_full T_vt_md">
                                 <strong class="T_ds_block T_mg_btm10 T_ft_wh500 T_ft_rem12 U_ft_c000">GIT계정</strong>
-                                <span class="T_ds_block T_ft_rem9hf U_ft_c777"><?=$member['mb_1']?></span> 
+                                <?/*
+                                <span class="T_ds_block T_ft_rem9hf U_ft_c777"><?=$member['mb_1']?></span>     
+                                */?>
+                                <button type="button" class="" v-on:click="openSocialgit()" >깃허브 소셜계정 연동하기</button>
                             </div>
                         </div>
                     </li>

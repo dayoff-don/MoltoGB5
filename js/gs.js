@@ -245,6 +245,10 @@ if(mode == 'my01'){
                 axios.get(`${g5_url}api/gitSetToday_api.php`).then(res=>{
                     if(res.data == 'did')this.todayComit = true;        
                 });
+            },
+            openSocialgit(){
+                console.log('깃허브 소셜 로그인 팝업창 열기');
+
             }
         }
         
