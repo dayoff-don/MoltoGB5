@@ -16,8 +16,11 @@ add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css
     <label class="frm_label">SNS 로그인 관리</label>
     <div class="reg-form sns-wrap-reg">
         <div class="sns-wrap">
-
-        <?php foreach( $socials as $social=>$provider_name ){
+        
+        <?php 
+            print_r2($socials);
+            print_r2($config);
+        foreach( $socials as $social=>$provider_name ){
             
             if( !option_array_checked($social, $config['cf_social_servicelist'])) {
                 continue;
