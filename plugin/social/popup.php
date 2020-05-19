@@ -17,6 +17,7 @@ if( !$provider_name ){
     alert('서비스 이름이 넘어오지 않았습니다.');
 }
 
+
 if( isset( $_REQUEST["redirect_to_idp"] ) ){
     $content = social_check_login_before();
 
@@ -42,5 +43,7 @@ if( isset( $_REQUEST["redirect_to_idp"] ) ){
     social_return_from_provider_page( $provider_name, '', '', '', '' );
 }
 
-if(!$is_member)goto_url(G5_URL.'/plugin/social/register_member.php?provider=Kakao&url=http%3A%2F%2Fgrassgardener.kr%2F%2Fbbs%2Fregister.php');
+if(!$is_member){
+    goto_url(G5_URL.'/plugin/social/register_member.php?provider=Kakao&url=http%3A%2F%2Fgrassgardener.kr%2F%2Fbbs%2Fregister.php');   
+}
 ?>

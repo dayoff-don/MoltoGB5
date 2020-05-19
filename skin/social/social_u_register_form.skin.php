@@ -44,10 +44,14 @@ add_stylesheet('<link rel="stylesheet" href="'.get_social_skin_url().'/style.css
             }
         ?>
 
-        <a href="<?php echo $link_href; ?>" id="sns-<?php echo $social; ?>" class="sns-icon social_link sns-<?php echo $social; ?><?php echo $add_class; ?>" title="<?php echo $title; ?>" data-provider="<?php echo $social; ?>" ><span class="ico"></span><span class="txt"><?php echo $provider_name; ?> 로그인</span></a>
-
+        <a href="<?php echo $link_href; ?>" id="sns-<?php echo $social; ?>" class="sns-icon social_link sns-<?php echo $social; ?><?php echo $add_class; ?>" title="<?php echo $title; ?>" data-provider="<?php echo $social; ?>" >
+            <?if($social == 'github'){?>
+            <i aria-hidden="true" class="fab fa-github ico-git"></i>
+            <?}else{?>
+            <span   span class="ico"></span><span class="txt"><?php echo $provider_name; ?> 로그인</span>
+            <?}?>
+            </a>
         <?php }     //end foreach ?>
-
         </div>
     </div>
 </li>

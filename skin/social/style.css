@@ -15,7 +15,8 @@
 .sns-icon .ico {display:block;vertical-align:middle}
 /*.sns-icon .txt {position:absolute;line-height:0;font-size:0;vertical-align:middle;overflow:hidden}*/
 .sns-icon .txt i {font-style:normal}
-
+.ico-git{width:24px;height:24px;background: #8b8b8b;color:#fff;}
+.ico-git::before{justify-content: center;display:flex;align-items: center;height:100%}
 #fregisterform .form_01 .reg-form {margin-bottom:20px}
 #fregisterform .form_01 .reg-form .sns-wrap {margin:10px 0 0;text-align:left}
 .reg-form .sns-icon {display:inline-block;vertical-align:middle;text-decoration:none;border-width:1px;border-style:solid;overflow:hidden;margin:0 1px}

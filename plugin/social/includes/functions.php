@@ -357,7 +357,7 @@ function social_extends_get_keys($provider){
 
         //gitHub
         // Payco
-        $r['Github'] = array(
+        $r['gitHub'] = array(
             "enabled" => true,
             "keys" => array("id" => $config['cf_github_clientid'], "secret" => $config['cf_github_secret']),
             "redirect_uri" => get_social_callbackurl('github'),

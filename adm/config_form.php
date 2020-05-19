@@ -1126,7 +1126,7 @@ include_once('_rewrite_config_form.php');
                     </div>
                 </div>
                 <div class="explain_box">
-                    <input type="checkbox" name="cf_social_servicelist[]" id="check_social_github" value="github" <?php echo option_array_checked('Github', $config['cf_social_servicelist']); ?> >
+                    <input type="checkbox" name="cf_social_servicelist[]" id="check_social_github" value="github" <?php echo option_array_checked('github', $config['cf_social_servicelist']); ?> >
                     <label for="check_social_github">깃허브 로그인을 사용합니다</label>
                     <div>
                     <h3>깃허브 CallbackURL</h3>

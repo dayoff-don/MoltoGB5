@@ -57,5 +57,15 @@ self action으로 상태값받고 액션하기
 */?>
 
 <?
+
+for($i=2; $i <68;$i++){
+
+echo "INSERT INTO g5_5_meta SET mta_db_table = 'board/yp_booking', mta_db_id = '$i', mta_country = 'ko_KR', mta_key = 'wr_roomsale2', mta_value = '10000', mta_reg_dt = NOW();";
+echo '<br>';
+echo "INSERT INTO g5_5_meta SET mta_db_table = 'board/yp_booking', mta_db_id = '$i', mta_country = 'ko_KR', mta_key = 'wr_roomsale1', mta_value = '5000', mta_reg_dt = NOW();";
+echo '<br>';
+echo "INSERT INTO g5_5_meta SET mta_db_table = 'board/yp_booking', mta_db_id = '$i', mta_country = 'ko_KR', mta_key = 'wr_roomsale', mta_value = '1', mta_reg_dt = NOW();";
+}
+
 include_once("../tail.sub.php");
 ?>
