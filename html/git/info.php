@@ -16,10 +16,14 @@
     }
     if($ch_data){
         $og_description = $set_git_id.'님 깃허브 금일 인증하셨습니다.' ;
+        $og_url = G5_IMG_URL.'/ok.png';
     }
-    if(!$og_description) $og_description = '인증정보가 없습니다. ㅠㅠ';
-    
+    if(!$og_description) {
+        $og_description = '인증정보가 없습니다. ㅠㅠ';
+        $og_url = G5_IMG_URL.'/no.png';
+    }
     include_once("../_head.php");
+    goto_url(G5_URL);
 ?>
 
 <?
