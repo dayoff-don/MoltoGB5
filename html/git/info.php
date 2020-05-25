@@ -23,7 +23,7 @@
         $og_url = G5_IMG_URL.'/no.png';
     }
     include_once("../_head.php");
-    goto_url(G5_URL);
+    //goto_url(G5_URL);
 ?>
 
 <?
