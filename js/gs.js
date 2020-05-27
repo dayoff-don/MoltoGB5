@@ -35,7 +35,7 @@ function dateDiff(_date1, _date2) {
 
 const mode = document.getElementById('app').getAttribute('data-mode');
 
-if(mode == 'git01'){
+if(mode == 'git01' || mode == 'info01'){
     const today = new Date();
     const app = new Vue({
         mode: 'production',
@@ -60,11 +60,17 @@ if(mode == 'git01'){
             gitId : g5_git_id
         },
         created: function () {
-            axios.get(g5_url + '/api/gitGetName_api.php').then(res=>{
-                this.userName = res.data.replace(/(\s*)/g, "");
+            if(mode == 'info01'){
+                this.userName = info01;
                 this.makeData();
-            });
-            this.rank();
+                this.rank();
+            }else{
+                axios.get(g5_url + '/api/gitGetName_api.php').then(res=>{
+                    this.userName = res.data.replace(/(\s*)/g, "");
+                    this.makeData();
+                });
+                this.rank();
+            }
         },
         methods:{
             removeData(e){

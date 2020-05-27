@@ -118,6 +118,10 @@ if(!defined('G5_IS_ADMIN'))
 <meta name="google" content="nositelinkssearchbox" />
 <!-- jsh add module start -->
 
+<script>
+    var info01 = "<?=$set_git_id?>"
+</script>
+
 <?php
 if(!defined('G5_IS_ADMIN')){ 
 	/* react And Babel JS ES6 */
@@ -141,7 +145,7 @@ if(!defined('G5_IS_ADMIN')){
 <!-- jsh add module end-->
 
 </head>
-<body  <?if($Jmode =="normal" || $Jmode =="my01" || $Jmode =="git01" || $Jmode == "main01")echo 'class="gs_bg01"';?>  <?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
+<body  <?if($Jmode =="normal" || $Jmode =="my01" || $Jmode =="git01" || $Jmode =="info01" || $Jmode == "main01")echo 'class="gs_bg01"';?>  <?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 
 <?php
 if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
