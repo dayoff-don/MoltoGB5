@@ -8,7 +8,7 @@
 
 <div id="loading"></div>
 <div id="app" data-mode="<?=$Jmode?>" class="T_wd_full T_ht_full"> 
-    <?if(!$is_member){?>
+    <?if((!$is_member && $Jmode !== "info01" )){?>
     <div class="T_ds_table T_ht_full T_wd_full U_mg_ct T_ps_rl" style="max-width:640px">
         <div class=" T_ds_cell T_ht_p80  T_vt_md" >
             <div class=" T_ft_ct gs_login U_bd_rd T_ps_rl U_ft_cfff">
