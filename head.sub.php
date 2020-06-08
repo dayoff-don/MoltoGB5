@@ -115,7 +115,8 @@ if(!defined('G5_IS_ADMIN'))
 
 <link rel="icon" type="image/png" sizes="32x32" href="<?=G5_IMG_URL?>/favicon_32.png" />
 <link rel="icon" type="image/png" sizes="196x196" href="<?=G5_IMG_URL?>/favicon_196.png" />
-<meta name="google" content="nositelinkssearchbox" />
+<meta name="google" content="nositelinkssearchbox" /> 
+<meta name="google-site-verification" content="8Fhy-8W4oUZ13KG1SXWHMMR45Eiitkx3Li82CsYHxOA" />
 <!-- jsh add module start -->
 
 <script>
