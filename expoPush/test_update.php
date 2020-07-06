@@ -22,7 +22,8 @@ if($content && $channelName && $recipient && $tit && $content){
         //echo 'Succeeded! We have created an Expo instance successfully';
         echo '전송성공';
     } catch (Exception $e) {
-        echo '전송실패';
+        echo '전송실패?';
+        print_r2($e);
     }
 }else{
     echo '전송실패';

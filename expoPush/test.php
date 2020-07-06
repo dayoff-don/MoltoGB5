@@ -9,7 +9,7 @@
     </div>
     <div>
         <label for="url">전송URL</label>
-        <input type="text" name="url" id="url" value="http://test.bbsj.kr/shop/item.php?it_id=1590139724">
+        <input type="text" name="url" id="url" value="">
     </div>
     <div>
         <label for="">메세지내용</label>
@@ -17,7 +17,7 @@
     </div>
     <div>
         <label for="recipient">대상토큰</label>
-        <input type="text" name="recipient" id="recipient" value="ExponentPushToken[a-bsqCI31E8cfCTk8RyQ0e]">
+        <input type="text" name="recipient" id="recipient" value="ExponentPushToken[o9oX3eLO_Xdc5B3uGt1r8t]">
     </div>
     <div>
         <label for="channelName">대상아이디</label>
